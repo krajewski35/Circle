@@ -1,0 +1,41 @@
+<?php
+//Start session
+session_start();
+
+//Redirect to login page if accessed directly
+if (empty($_SESSION['email'])) {
+    header("Location: login_page.php");
+    exit();
+}
+//Redirect to admin page if user is admin
+elseif ($_SESSION['member_type'] == 'admin') {
+    header("Location: admin_page.php");
+    exit();
+}
+
+//Include header
+$pagetitle = 'User Settings';
+include('includes/header.php');
+
+//Retrieve user info from cookies
+$user = array();
+$_SESSION['firstname'] = $user['firstname'];
+$_SESSION['lastname'] = $user['lastname'];
+$_SESSION['username'] = $user['username'];
+$_SESSION['email'] = $user['email'];
+$_SESSION['member_type'] = $user['member_type'];
+$_SESSION['member_purpose'] = $user['member_purpose'];
+$_SESSION['regdate'] = $user['is_admin'];
+
+//Display content
+echo "<h3>{$user['firstname']} {$user['lastname']}</h3>";
+echo "<h4>{$user['username']}</h4>";
+echo "<p class=\"userdetails\">
+    <b>Email address:</b> {$user['email']}</p>
+    <b>User type:</b>" . ucfirst($user['member_type']) .
+    "<b>User status:</b>" . ucfirst($user['member_purpose']);
+echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log out</button>";
+
+//Include footer
+include('includes/footer.php')
+?>

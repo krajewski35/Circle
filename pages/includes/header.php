@@ -28,19 +28,20 @@
                     <?php
                     //Logged in user access
                     if (!empty($_SESSION['email'])) {
-                        /*
-                        //Search page on login
-                        echo '<li class="navigation"><a href="search_page.php" class="navigation">Search Products</a></li>';
+                        
                         //Admin only navigation
                         if ($_SESSION['is_admin']) {
+                            /*
                             echo '<li class="navigation"><a href="admin_page.php" class="navigation">Admin Page</a></li>';
                             echo '<li class="navigation"><a href="addproduct_page.php" class="navigation">Add Product</a></li>';
                             echo '<li class="navigation"><a href="vieworders_page.php" class="navigation">View Orders</a></li>';
+                            */
                         }
                         //User only navigation
                         else {
-                            echo '<li class="navigation"><a href="user_page.php" class="navigation">User Page</a></li>';
+                            echo '<li class="navigation"><a href="user_settings.php" class="navigation">User Settings</a></li>';
                         }
+                        /*
                         //User & Admin navigation
                         echo '<li class="navigation"><a href="cart_page.php" class="navigation">Cart</a></li>';
                         */

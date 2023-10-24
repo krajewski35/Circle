@@ -5,12 +5,12 @@ session_start();
 //Redirect to user page if already logged in
 if (!empty($_SESSION['email'])) {
     //Redirect to user or admin page based on user admin status
-    if ($_SESSION['is_admin'] == true) {
+    if ($_SESSION['member_type'] == 'admin') {
         header("Location: admin_page.php");
         exit();
     }
     else {
-        header("Location: user_page.php");
+        header("Location: user_settings.php");
         exit();
     }
 }
