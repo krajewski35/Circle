@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Check and retrieve login information
     $errors = array();
     if (!empty($_POST['email'])) { //Check Email
-        $username = mysqli_real_escape_string($dbc, trim($_POST['username']));;
+        $email = mysqli_real_escape_string($dbc, trim($_POST['email']));;
     }
     else {
         $errors[] = 'You forgot to enter an email';
