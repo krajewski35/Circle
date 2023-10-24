@@ -39,16 +39,21 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
     
     //Assign each field in an array
     $fields = array(
-        'firstname' => array('firstname', 'first name'),
-        'lastname' => array('lastname', 'last name'),
-        'username' => array('username', 'public username'),
-        'email' => array('email', 'email'),
-        'password' => array('password', 'password'),
+        'firstname' => 'first name',
+        'lastname' => 'last name',
+        'username' => 'public username',
+        'email' => 'email',
+        'password' => 'password',
+        'membertype' => 'member type',
+        'memberpurpose' => 'intended use',
     );
 
+    //Initialize user info in array
+    $user = array();
+
     //Check fields for correct input
-    foreach ($fields as $field) {
-        $fields[$field] = checkform($field[0], $field[1], $errors, $dbc);
+    foreach ($fields as $field => $response) {
+        $user[$field] = checkform($field, $response, $errors, $dbc);
     }
 
     //Assign each field with confirmation field in an array
@@ -62,19 +67,11 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
         verifymatch($confirm_field[0], $confirm_field[1], $errors);
     }
 
-    if (empty($_POST('membertype'))) {
-        $errors[] = "You forgot to enter your member type";
-    }
-
-    if (empty($_POST('memberpurpose'))) {
-        $errors[] = "You forgot to enter your purpose";
-    }
-
     //Check if all fields filled in
     if (empty($errors)) {
 
         //Check if user already exists
-        $q = "SELECT email FROM users WHERE email = '{$_POST['email']}'";
+        $q = "SELECT email FROM users WHERE email = '{$user['email']}";
         $r = @mysqli_query($dbc, $q);
         if (mysqli_num_rows($r) == 1) {
             $errors[] = 'This email is already used. Please try again!';
@@ -83,13 +80,13 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
         //Add user to database
         else {
             //Run insert query
-            $q = "INSERT INTO users (firstname, lastname, username, email, password, membertype, memberpurpose, regdate) VALUES ('{$_POST['firstname']}', '{$_POST['lastname']}', '{$_POST['username']}', '{$_POST['email']}', SHA2('{$_POST['password']}', 256), '{$_POST['membertype']}', '{$_POST['memberpurpose']}', NOW())";
+            $q = "INSERT INTO users (firstname, lastname, username, email, password, membertype, memberpurpose, regdate) VALUES ('{$_POST['firstname']}', '{$user['lastname']}', '{$user['username']}', '{$user['email']}', SHA2('{$user['password']}', 256), '{$user['membertype']}', '{$user['memberpurpose']}', NOW())";
             $r = @mysqli_query($dbc, $q);
             mysqli_close($dbc);
             
             //Check if credentials valid
             if ($r) {
-                echo "Welcome to Circle {$_POST['firstname']} {$_POST['lastname']}! You can now log in.";
+                echo "Welcome to Circle {$user['firstname']} {$user['lastname']}! You can now log in.";
                 echo "</p><button type=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
             }
             //Invalid credentials
