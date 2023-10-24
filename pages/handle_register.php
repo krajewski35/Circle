@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Check each field is filled
     foreach ($fields as $field => $response) {
         if (!empty($_POST[$field])) {
-            $fname = mysqli_real_escape_string($dbc, trim($_POST[$field]));;
+            $user[$field] = mysqli_real_escape_string($dbc, trim($_POST[$field]));
         }
         else {
             $errors[] = "You forgot to enter your $response";
