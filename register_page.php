@@ -50,7 +50,7 @@ include('includes/header.php');
             <select name="membertype" id="membertype">
                 <?php 
                 //Add dropdown option for each member type
-                $member_type = array("individual", "organization");
+                $member_type = array("", "individual", "organization");
                 foreach ($member_type as $type) {
                     $uctype = ucfirst($type);
                     echo "<option value=\"$type\">{$uctype}</option>";
@@ -63,6 +63,7 @@ include('includes/header.php');
                 <?php 
                 //Add dropdown option for each member purpose
                 $member_purpose = array(
+                    array("", ""),
                     array("volunteer", "I want to volunteer"),
                     array("cause", "I need help or support for my cause"),
                     array("sponsor", "I want to provide rewards for volunteers")

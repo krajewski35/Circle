@@ -4,9 +4,10 @@ $pagetitle = 'Registration';
 include('includes/header.php');
 
 //Check if field specified entered in POST
-function checkform($field, $response, $dbc) {
+function checkform($field, $response, $errors, $dbc) {
     if (!empty($_POST[$field])) {
         $field_return = mysqli_real_escape_string($dbc, trim($_POST[$field]));
+        echo $_POST[$field]; //DEBUGGING
     } else {
         $errors[] = "You forgot to enter your $response";
         $field_return = $field;
@@ -15,7 +16,7 @@ function checkform($field, $response, $dbc) {
 }
 
 //Check if field and confirmation field match
-function verifymatch($field, $confirm_field) {
+function verifymatch($field, $confirm_field, $errors) {
     //Check if both fields are not empty
     if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
         //Check if both fields match
@@ -47,7 +48,7 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Check fields for correct input
     foreach ($fields as $field) {
-        $fields[$field] = checkform($field[0], $field[1], $dbc);
+        $fields[$field] = checkform($field[0], $field[1], $errors, $dbc);
     }
 
     //Assign each field with confirmation field in an array
@@ -58,7 +59,7 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Check if main and confirmation field match
     foreach ($confirm_fields as $confirm_field) {
-        verifymatch($confirm_field[0], $confirm_field[1]);
+        verifymatch($confirm_field[0], $confirm_field[1], $errors);
     }
 
     if (empty($_POST('membertype'))) {
