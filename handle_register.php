@@ -3,38 +3,15 @@
 $pagetitle = 'Registration';
 include('includes/header.php');
 
-//Check if field specified entered in POST
-function checkform($field, $response, $errors, $dbc) {
-    if (!empty($_POST[$field])) {
-        $field_return = mysqli_real_escape_string($dbc, trim($_POST[$field]));
-    } else {
-        $errors[] = "You forgot to enter your $response";
-        $field_return = '';
-    }
-    return $field_return;
-}
-
-//Check if field and confirmation field match
-function verifymatch($field, $confirm_field, $errors) {
-    //Check if both fields are not empty
-    if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
-        //Check if both fields match
-        if ($_POST[$field] != $_POST[$confirm_field]) {
-            $errors[] = 'Your ' . $field . 's do not match';
-        }
-    //Check if confirmation field is empty
-    } elseif(empty($_POST[$confirm_field])) {
-        $errors[] = 'Your ' . $field . 's do not match';
-    }
-
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
     
     //Check and retrieve login information
     $errors = array();
+
+    //Initialize user info in array
+    $user = array();
     
     //Assign each field in an array
     $fields = array(
@@ -47,24 +24,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'memberpurpose' => 'intended use',
     );
 
-    //Initialize user info in array
-    $user = array();
-
-    //Check fields for correct input
+    //Check each field is filled
     foreach ($fields as $field => $response) {
-        $user[$field] = checkform($field, $response, $errors, $dbc);
-        echo "$field: $user[$field]"; //DEBUGGING
+        if (!empty($_POST[$field])) {
+            $fname = mysqli_real_escape_string($dbc, trim($_POST[$field]));;
+        }
+        else {
+            $errors[] = "You forgot to enter your $response";
+        }
     }
-
-    //Assign each field with confirmation field in an array
+    
+    //Assign each field with confirmation field in array
     $confirm_fields = array(
-        array('email', 'emailconfirm'),
-        array('password', 'passwordconfirm'),
+        'email' => 'emailconfirm',
+        'password' => 'passwordconfirm',
     );
 
     //Check if main and confirmation field match
-    foreach ($confirm_fields as $confirm_field) {
-        verifymatch($confirm_field[0], $confirm_field[1], $errors);
+    foreach ($confirm_fields as $field => $confirm_field) {
+        //Check if both fields are not empty
+        if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
+            //Check if both fields match
+            if ($_POST[$field] != $_POST[$confirm_field]) {
+                $errors[] = 'Your ' . $field . 's do not match';
+            }
+        //Check if confirmation field is empty
+        } elseif(empty($_POST[$confirm_field])) {
+            $errors[] = 'Your ' . $field . 's do not match';
+        }
     }
 
     //Check if all fields filled in
