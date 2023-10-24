@@ -1,5 +1,4 @@
 <?php
-echo "Test"; //DEBUGGING
 //Include header
 $pagetitle = 'Registration';
 include('includes/header.php');
@@ -106,6 +105,9 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
         //Redirect user
         echo "</p><button type=\"button\" onclick=\"location.href='register.php'\">Try again</button>";
     }
+}
+else {
+    echo "Issue test"; //DEBUGGING
 }
 
 //Include footer
