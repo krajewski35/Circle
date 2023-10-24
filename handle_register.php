@@ -29,7 +29,7 @@ function verifymatch($field, $confirm_field, $errors) {
 
 }
 
-if ($SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
     
@@ -105,9 +105,6 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
         //Redirect user
         echo "</p><button type=\"button\" onclick=\"location.href='register.php'\">Try again</button>";
     }
-}
-else {
-    echo "Issue test"; //DEBUGGING
 }
 
 //Include footer
