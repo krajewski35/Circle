@@ -41,16 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
 
     //Check if main and confirmation field match
-    foreach ($confirm_fields as $field => $confirm_field) {
-        //Check if both fields are not empty
-        if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
-            //Check if both fields match
-            if ($_POST[$field] != $_POST[$confirm_field]) {
+    if (empty($errors)) {
+        foreach ($confirm_fields as $field => $confirm_field) {
+            //Check if both fields are not empty
+            if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
+                //Check if both fields match
+                if ($_POST[$field] != $_POST[$confirm_field]) {
+                    $errors[] = 'Your ' . $field . 's do not match';
+                }
+            //Check if confirmation field is empty
+            } elseif(empty($_POST[$confirm_field])) {
                 $errors[] = 'Your ' . $field . 's do not match';
             }
-        //Check if confirmation field is empty
-        } elseif(empty($_POST[$confirm_field])) {
-            $errors[] = 'Your ' . $field . 's do not match';
         }
     }
 

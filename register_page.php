@@ -63,13 +63,14 @@ include('includes/header.php');
                 <?php 
                 //Add dropdown option for each member purpose
                 $member_purpose = array(
-                    array("", ""),
-                    array("volunteer", "I want to volunteer"),
-                    array("cause", "I need help or support for my cause"),
-                    array("sponsor", "I want to provide rewards for volunteers")
+                    '' => '',
+                    'volunteer' => 'I want to volunteer',
+                    'cause' => 'I need help or support for my cause',
+                    'sponsor' => 'I want to provide rewards for volunteers',
                 );
                 foreach ($member_purpose as $purpose) {
-                    echo "<option value=\"ucfirst($purpose[0])\">$purpose[1]</option>";
+                    $ucpurpose = ucfirst($purpose[0]);
+                    echo "<option value=\"$ucpurpose\">$purpose[1]</option>";
                 }
                 ?>
             </select><br>
