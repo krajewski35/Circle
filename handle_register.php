@@ -9,7 +9,7 @@ function checkform($field, $response, $errors, $dbc) {
         $field_return = mysqli_real_escape_string($dbc, trim($_POST[$field]));
     } else {
         $errors[] = "You forgot to enter your $response";
-        $field_return = $field;
+        $field_return = '';
     }
     return $field_return;
 }
@@ -53,6 +53,7 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
     //Check fields for correct input
     foreach ($fields as $field => $response) {
         $user[$field] = checkform($field, $response, $errors, $dbc);
+        echo "$field: $user[$field]"; //DEBUGGING
     }
 
     //Assign each field with confirmation field in an array
