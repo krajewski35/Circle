@@ -32,7 +32,7 @@ function verifymatch($field, $confirm_field, $errors) {
 if ($SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
-
+    echo "Test"; //DEBUGGING
     //Check and retrieve login information
     $errors = array();
     
