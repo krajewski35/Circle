@@ -7,7 +7,6 @@ include('includes/header.php');
 function checkform($field, $response, $errors, $dbc) {
     if (!empty($_POST[$field])) {
         $field_return = mysqli_real_escape_string($dbc, trim($_POST[$field]));
-        echo $_POST[$field]; //DEBUGGING
     } else {
         $errors[] = "You forgot to enter your $response";
         $field_return = $field;
@@ -71,7 +70,7 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
 
         //Check if user already exists
-        $q = "SELECT email FROM users WHERE email = '{$user['email']}";
+        $q = "SELECT email FROM users WHERE email = '{$user['email']}'";
         $r = @mysqli_query($dbc, $q);
         if (mysqli_num_rows($r) == 1) {
             $errors[] = 'This email is already used. Please try again!';
@@ -95,15 +94,15 @@ if ($SERVER['REQUEST_METHOD'] == 'POST') {
                 $errors[] = 'Issue with registration system. Please contact the Circle team for support.';
             }
         }
-        if (!empty($errors)) {
-            //Redirect back to registration page with errors
-            echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
-            foreach($errors as $error) {
-                echo "<li>- $error -</li>";
-            }
-            //Redirect user
-            echo "</p><button type=\"button\" onclick=\"location.href='register.php'\">Try again</button>";
+    }
+    if (!empty($errors)) {
+        //Redirect back to registration page with errors
+        echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
+        foreach($errors as $error) {
+            echo "<li>$error</li>";
         }
+        //Redirect user
+        echo "</p><button type=\"button\" onclick=\"location.href='register.php'\">Try again</button>";
     }
 }
 
