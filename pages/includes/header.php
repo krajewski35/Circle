@@ -17,7 +17,7 @@
     <body>
         <div id = "header">
             <span id = "site-name">
-                <img src="images/CircleLogoWeb.png" width="200" height="105" class="site-name">
+                <img src="images/CircleLogoWeb.png" height="105" class="site-name" align="center">
                 <!-- <h1 class="site-name">Circle Volunteering</h1> -->
             </span>
             
