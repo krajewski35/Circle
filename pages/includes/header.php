@@ -1,25 +1,33 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <!-- Basic Header -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title><?php echo "$pagetitle" ?> - Circle</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="icon" href="images/favicon.ico">
+
+        <!-- Links -->
+        <link rel="icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <link rel= "stylesheet" href="includes/style.css">
+        <link rel="icon" type="image/x-icon" href="cir_favicon.png">
     </head>
     <body>
         <div id = "header">
             <span id = "site-name">
-                <!-- <img src="images/logo.png" width="120" height="80" class="site-name"> ADD LOGO-->
+                <img src="images/logo.png" width="200" height="105" class="site-name">
                 <h1 class="site-name">Circle Volunteering</h1>
             </span>
             
             <div id="navigation">
                 <ul class="navigation">
-                    <!-- General navigation -->
-                    <li class="navigation"><a href="index.php" class="navigation">Build PC</a></li>
+                    <!-- All user access -->
+                    <li class="navigation"><a href="index.php" class="navigation">Home</a></li>
                     <?php
-                    //Logged in user navigation
+                    //Logged in user access
                     if (!empty($_SESSION['email'])) {
                         /*
                         //Search page on login
@@ -39,7 +47,7 @@
                         */
                         
                     }
-                    //Logged out user navigation
+                    //Logged out user access
                     else {
                         echo '<li class="navigation"><a href="register_page.php" class="navigation">Register User</a></li>';
                     }
