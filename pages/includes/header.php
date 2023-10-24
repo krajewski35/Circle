@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title><?php echo "$pagetitle" ?> - Circle</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
         <!-- CSS Design -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
