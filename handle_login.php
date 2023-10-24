@@ -5,7 +5,7 @@ session_start();
 //Retrieve form information
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to Database
-    require('mysqli_connect.php');
+    require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
     
     //Check and retrieve login information
     $errors = array();
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Check if all fields filled in
     if (empty($errors)) {
         //Query username credentials
-        $q = "SELECT firstname, lastname, email, is_admin, regdate FROM users WHERE email = '$email' AND password = SHA2('$password', 256)";
+        $q = "SELECT firstname, lastname, username, email, membertype, memberpurpose, regdate FROM users WHERE email = '$email' AND password = SHA2('$password', 256)";
         $r = @mysqli_query($dbc, $q);
         mysqli_close($dbc);
         
@@ -34,14 +34,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Get user information
             $user = mysqli_fetch_array($r, MYSQLI_ASSOC);
             
-            //Set user session info
-            $_SESSION['email'] = $user['email'];
+            //Store user info into session
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['lastname'] = $user['lastname'];
-            $_SESSION['is_admin'] = $user['is_admin'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['membertype'] = $user['membertype'];
+            $_SESSION['memberpurpose'] = $user['memberpurpose'];
+            $_SESSION['regdate'] = $user['is_admin'];
             
             //Redirect to admin page if user is admin
-            if ($user['is_admin'] == true) {
+            if ($user['memberpurpose'] == 'admin') {
                 //Redirect user
                 header("Location: admin_page.php");
                 //Quit script
