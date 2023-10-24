@@ -68,9 +68,9 @@ include('includes/header.php');
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
-                foreach ($member_purpose as $purpose) {
-                    $ucpurpose = ucfirst($purpose[0]);
-                    echo "<option value=\"$ucpurpose\">$purpose[1]</option>";
+                foreach ($member_purpose as $purpose => $description) {
+                    $ucpurpose = ucfirst($purpose);
+                    echo "<option value=\"$ucpurpose\">$description</option>";
                 }
                 ?>
             </select><br>
