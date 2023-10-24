@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<li>$error</li>";
         }
         //Redirect user
-        echo "</p><button type=\"button\" onclick=\"location.href='register.php'\">Try again</button>";
+        echo "</p><button type=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
     }
 }
 
