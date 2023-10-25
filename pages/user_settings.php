@@ -33,13 +33,13 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
         <p>
             <!-- First name -->
             <label for="firstname" class="change">Change First Name</label><br>
-            <input type="text" name="firstname" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['firstname']}\""; ?> /><br>
+            <input type="text" name="firstname" class="change" size="20" maxlength="255" /><br>
             <!-- Last name -->
             <label for="lastname" class="change">Change Last Name</label><br>
-            <input type="text" name="lastname" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['lastname']}\""; ?> /><br>
+            <input type="text" name="lastname" class="change" size="20" maxlength="255" /><br>
             <!-- Username -->
             <label for="username" class="change">Change Public Username</label><br>
-            <input type="text" name="username" class="change" size="20" maxlength="31" value=<?php echo "\"{$_SESSION['username']}\""; ?> /><br>
+            <input type="text" name="username" class="change" size="20" maxlength="31" /><br>
             <!-- Email Address -->
             <label for="email" class="change">Change Email Address</label><br>
             <input type="email" name="email" class="change" size="20" maxlength="255" /><br>
