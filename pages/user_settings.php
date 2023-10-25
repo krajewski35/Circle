@@ -88,7 +88,11 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
     </fieldset>
 </form>
 
-<?php
-//Include footer
-include('includes/footer.php')
-?>
+<!-- Account deletion button -->
+<h3>Delete account (Warning: This action is irreversible)</h3>
+<form action="delete_account.php" method="post" align="center" class="urgent">
+    <input type="submit" name="submit" value="Delete account" />
+</form>
+
+<!-- Include footer -->
+<?php include('includes/footer.php') ?>
