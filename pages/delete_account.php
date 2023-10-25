@@ -9,6 +9,10 @@ if (empty($_SESSION['email'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    //Include header
+    $pagetitle = 'User Settings';
+    include('includes/header.php');
+
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
 
@@ -41,6 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 else {
+    //Include header
+    $pagetitle = 'Error';
+    include('includes/header.php');
+
     echo "<h3>You ended up on this page by mistake</h3>";
     echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
 }
