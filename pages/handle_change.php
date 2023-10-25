@@ -1,4 +1,7 @@
 <?php
+//Start session
+session_start();
+
 //Include header
 $pagetitle = 'Registration';
 include('includes/header.php');
@@ -64,9 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysqli_num_rows($r) >= 1) {
             while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
                 if ($row['email'] == $user['email']) {
-                    $errors[] = 'This email is already used. Please log in instead!';
+                    $errors[] = 'This email is already used. Please enter a different email.';
                 } elseif ($row['username'] == $user['username']) {
-                    $errors[] = 'This username is already used. Please log in instead!';
+                    $errors[] = 'This username is already used. Please enter a different username.';
                 }
             }
         }
