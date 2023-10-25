@@ -24,13 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'memberpurpose' => 'role',
     );
 
-    //Check each field is filled
+    //Check if field is filled and sanitize input if so
     foreach ($fields as $field => $response) {
         if (!empty($_POST[$field])) {
             $user[$field] = mysqli_real_escape_string($dbc, trim($_POST[$field]));
-        }
-        else {
-            $errors[] = "You forgot to enter your $response";
         }
     }
     
@@ -41,22 +38,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
 
     //Check if main and confirmation field match
-    if (empty($errors)) {
-        foreach ($confirm_fields as $field => $confirm_field) {
-            //Check if both fields are not empty
-            if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
-                //Check if both fields match
-                if ($_POST[$field] != $_POST[$confirm_field]) {
-                    $errors[] = 'Your ' . $field . 's do not match';
-                }
-            //Check if confirmation field is empty
-            } elseif(empty($_POST[$confirm_field])) {
+    foreach ($confirm_fields as $field => $confirm_field) {
+        //Check if both fields are not empty
+        if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
+            //Check if both fields match
+            if ($_POST[$field] != $_POST[$confirm_field]) {
                 $errors[] = 'Your ' . $field . 's do not match';
             }
+        //Check if confirmation field is empty
+        } elseif (!empty($_POST[$field]) && empty($_POST[$confirm_field])) {
+            $errors[] = 'Your ' . $field . 's do not match';
         }
     }
 
-    //Check if all fields filled in
+    //Check if no issues with changing info
     if (empty($errors)) {
 
         //Check if user already exists by email or username
@@ -74,15 +69,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //Add user to database
         else {
-            //Run insert query
-            $q = "INSERT INTO users (firstname, lastname, username, email, password, membertype, memberpurpose, regdate) VALUES ('{$_POST['firstname']}', '{$user['lastname']}', '{$user['username']}', '{$user['email']}', SHA2('{$user['password']}', 256), '{$user['membertype']}', '{$user['memberpurpose']}', NOW())";
+            //Build update query for each field filled
+            $q = "UPDATE users SET ";
+            foreach ($fields as $field => $response) {
+                if (!empty($_POST[$field])) {
+                    $q .= "$field = {$user[$field]} ";
+                }
+            }
+            $q .= "WHERE email='{$_SESSION['email']}'";
+
+            echo "Query: $q"; //DEBUGGING
+
+            //Run update query
             $r = @mysqli_query($dbc, $q);
             mysqli_close($dbc);
             
             //Check if credentials valid
             if ($r) {
-                echo "Welcome to Circle {$user['firstname']} {$user['lastname']}! You can now log in.";
-                echo "</p><button type=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
+                echo "User information updated";
+                echo "</p><button type=\"button\" onclick=\"location.href='user_settings.php'\">Back to user settings</button>";
             }
             //Invalid credentials
             else
@@ -98,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<li>$error</li>";
         }
         //Redirect user
-        echo "</p><button type=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
+        echo "</p><button type=\"button\" onclick=\"location.href='user_settings.php'\">Go back</button>";
     }
 }
 
