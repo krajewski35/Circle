@@ -9,9 +9,6 @@ if (empty($_SESSION['email'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //Include header
-    $pagetitle = 'User Settings';
-    include('includes/header.php');
 
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
@@ -31,6 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['membertype'] = '';
         $_SESSION['memberpurpose'] = '';
         $_SESSION['regdate'] = '';
+
+        //Include header
+        $pagetitle = 'User Settings';
+        include('includes/header.php');
 
         //Log out prompt
         echo "<h3>You have successfully deleted your account!</h3>";
