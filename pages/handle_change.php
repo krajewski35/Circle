@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $q = "UPDATE users SET ";
             foreach ($fields as $field => $response) {
                 if (!empty($_POST[$field])) {
-                    $q .= "$field = {$user[$field]} ";
+                    $q .= "$field = '{$user[$field]}' ";
                 }
             }
             $q .= "WHERE email='{$_SESSION['email']}'";

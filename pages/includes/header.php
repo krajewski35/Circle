@@ -30,7 +30,7 @@
                     if (!empty($_SESSION['email'])) {
                         
                         //Admin only navigation
-                        if ($_SESSION['is_admin']) {
+                        if ($_SESSION['member_type'] == 'admin') {
                             /*
                             echo '<li class="navigation"><a href="admin_page.php" class="navigation">Admin Page</a></li>';
                             echo '<li class="navigation"><a href="addproduct_page.php" class="navigation">Add Product</a></li>';

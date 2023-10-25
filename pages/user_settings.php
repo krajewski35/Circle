@@ -33,7 +33,7 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
         <p>
             <!-- First name -->
             <label for="firstname" class="change">Change First Name</label><br>
-            <input type="text" name="firstname" class="change" size="20" maxlength="255" /><br>
+            <input type="text" name="firstname" class="change" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['firstname']}\"" ?> /><br>
             <!-- Last name -->
             <label for="lastname" class="change">Change Last Name</label><br>
             <input type="text" name="lastname" class="change" size="20" maxlength="255" /><br>
