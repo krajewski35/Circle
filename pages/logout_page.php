@@ -13,8 +13,8 @@ $_SESSION['firstname'] = '';
 $_SESSION['lastname'] = '';
 $_SESSION['username'] = '';
 $_SESSION['email'] = '';
-$_SESSION['member_type'] = '';
-$_SESSION['member_purpose'] = '';
+$_SESSION['membertype'] = '';
+$_SESSION['memberpurpose'] = '';
 $_SESSION['regdate'] = '';
 
 //Include header

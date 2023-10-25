@@ -5,7 +5,7 @@ session_start();
 //Redirect to user page if already logged in
 if (!empty($_SESSION['email'])) {
     //Redirect to user or admin page based on user admin status
-    if ($_SESSION['member_type'] == 'admin') {
+    if ($_SESSION['membertype'] == 'admin') {
         header("Location: admin_page.php");
         exit();
     }
@@ -51,9 +51,9 @@ include('includes/header.php');
             <select name="membertype" id="membertype" required>
                 <?php 
                 //Add dropdown option for each member type
-                $member_type = array("individual", "organization");
+                $membertype = array("individual", "organization");
                 echo "<option value=\"\" selected disabled hidden>Select an Option</option>";
-                foreach ($member_type as $type) {
+                foreach ($membertype as $type) {
                     $uctype = ucfirst($type);
                     echo "<option value=\"$type\">$uctype</option>";
                 }
@@ -64,13 +64,13 @@ include('includes/header.php');
             <select name="memberpurpose" id="memberpurpose" required>
                 <?php 
                 //Add dropdown option for each member purpose
-                $member_purpose = array(
+                $memberpurpose = array(
                     'volunteer' => 'I want to volunteer',
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
                 echo "<option value=\"\" selected disabled hidden>Select an Option</option>";
-                foreach ($member_purpose as $purpose => $description) {
+                foreach ($memberpurpose as $purpose => $description) {
                     echo "<option value=\"$purpose\">$description</option>";
                 }
                 ?>

@@ -8,7 +8,7 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 //Redirect to admin page if user is admin
-elseif ($_SESSION['member_type'] == 'admin') {
+elseif ($_SESSION['membertype'] == 'admin') {
     header("Location: admin_page.php");
     exit();
 }
@@ -22,8 +22,8 @@ echo "<h3>{$_SESSION['firstname']} {$_SESSION['lastname']}</h3>";
 echo "<h4>{$_SESSION['username']}</h4>";
 echo "<p class=\"userdetails\">" . 
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
-    <b>User type: </b>" . ucfirst($_SESSION['member_type']) . "<br>
-    <b>User status: </b>" . ucfirst($_SESSION['member_purpose']) . "</p>";
+    <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
+    <b>User status: </b>" . ucfirst($_SESSION['memberpurpose']) . "</p>";
 echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log out</button>";
 ?>
 
@@ -57,10 +57,10 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <select name="membertype" id="membertype">
                 <?php 
                 //Add dropdown option for each member type (Order based on current type)
-                $member_type = array('individual', 'organization');
-                $uctype = ucfirst($_SESSION['member_type']);
-                echo "<option value=\"{$_SESSION['member_type']}\" selected disabled hidden>$uctype</option>";
-                foreach ($member_type as $type) {
+                $membertype = array('individual', 'organization');
+                $uctype = ucfirst($_SESSION['membertype']);
+                echo "<option value=\"{$_SESSION['membertype']}\" selected disabled hidden>$uctype</option>";
+                foreach ($membertype as $type) {
                     $uctype = ucfirst($type);
                     echo "<option value=\"$type\">$uctype</option>";
                 }
@@ -71,14 +71,14 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <select name="memberpurpose" id="memberpurpose">
                 <?php 
                 //Add dropdown option for each member purpose
-                $member_purpose = array(
+                $memberpurpose = array(
                     'volunteer' => 'I want to volunteer',
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
-                $ucpurpose = ucfirst($_SESSION['member_purpose']);
-                echo "<option value=\"{$_SESSION['member_purpose']}\" selected disabled hidden>$ucpurpose</option>";
-                foreach ($member_purpose as $purpose => $description) {
+                $ucpurpose = ucfirst($_SESSION['memberpurpose']);
+                echo "<option value=\"{$_SESSION['memberpurpose']}\" selected disabled hidden>$ucpurpose</option>";
+                foreach ($memberpurpose as $purpose => $description) {
                     echo "<option value=\"$purpose\">$description</option>";
                 }
                 ?>

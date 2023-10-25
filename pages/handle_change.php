@@ -76,16 +76,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //Add user to database
         else {
+            //Get email seperate for databse reference in case it changes
+            $prevemail = $_SESSION['email'];
+
             //Build update query for each field filled
             $q = "UPDATE users SET ";
             foreach ($fields as $field => $response) {
                 if (!empty($_POST[$field])) {
-                    $q .= "$field = '{$user[$field]}' ";
+                    $q .= "$field = '{$user[$field]}', ";
+                    $_SESSION[$field] = $user[$field];
                 }
             }
-            $q .= "WHERE email='{$_SESSION['email']}'";
+            $q = substr($q, 0, strlen($q)-3); //Remove extra end comma
+            $q .= "WHERE email='$prevemail'";
 
-            echo "Query: $q"; //DEBUGGING
+            echo "Query: $q<br>"; //DEBUGGING
 
             //Run update query
             $r = @mysqli_query($dbc, $q);

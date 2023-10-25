@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['lastname'] = $user['lastname'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
-            $_SESSION['member_type'] = $user['membertype'];
-            $_SESSION['member_purpose'] = $user['memberpurpose'];
+            $_SESSION['membertype'] = $user['membertype'];
+            $_SESSION['memberpurpose'] = $user['memberpurpose'];
             $_SESSION['regdate'] = $user['regdate'];
             
             //Redirect to admin page if user is admin
