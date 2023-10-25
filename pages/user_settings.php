@@ -20,8 +20,8 @@ include('includes/header.php');
 //Retrieve user info from cookies
 $user = array();
 //DEBUGGING
-foreach ($_SESSION as $session_value) {
-    echo "Value: $session_value<br>";
+foreach ($_SESSION as $key => $session_value) {
+    echo "$key: $session_value<br>";
 }
 $_SESSION['firstname'] = $user['firstname'];
 $_SESSION['lastname'] = $user['lastname'];
