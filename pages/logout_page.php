@@ -9,12 +9,6 @@ if (empty($_SESSION['email'])) {
 }
 
 //Erase session variables
-$_SESSION['username'] = '';
-$_SESSION['fname'] = '';
-$_SESSION['lname'] = '';
-$_SESSION['email'] = '';
-$_SESSION['is_admin'] = '';
-
 $_SESSION['firstname'] = '';
 $_SESSION['lastname'] = '';
 $_SESSION['username'] = '';
