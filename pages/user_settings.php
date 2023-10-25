@@ -12,10 +12,6 @@ elseif ($_SESSION['member_type'] == 'admin') {
     header("Location: admin_page.php");
     exit();
 }
-//DEBUGGING
-if (!is_writable(session_save_path())) {
-    echo 'Session path "'.session_save_path().'" is not writable for PHP!'; 
-}
 
 //Include header
 $pagetitle = 'User Settings';
@@ -23,6 +19,10 @@ include('includes/header.php');
 
 //Retrieve user info from cookies
 $user = array();
+//DEBUGGING
+foreach ($_SESSION as $session_value) {
+    echo "Value: $session_value<br>";
+}
 $_SESSION['firstname'] = $user['firstname'];
 $_SESSION['lastname'] = $user['lastname'];
 $_SESSION['username'] = $user['username'];
