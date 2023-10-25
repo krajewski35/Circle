@@ -32,10 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['memberpurpose'] = '';
         $_SESSION['regdate'] = '';
 
-        //Include header
-        $pagetitle = 'Delete account';
-        include('includes/header.php');
-
         //Log out prompt
         echo "<h3>You have successfully deleted your account!</h3>";
         echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
