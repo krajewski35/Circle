@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $q = substr($q, 0, strlen($q)-2); //Remove extra end comma
             $q .= " WHERE email='$prevemail'";
 
-            echo "Query: $q<br>"; //DEBUGGING
+            //echo "Query: $q<br>"; //Uncomment for DEBUGGING
 
             //Run update query
             $r = @mysqli_query($dbc, $q);
