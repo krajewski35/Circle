@@ -15,7 +15,7 @@ if (!empty($_SESSION['email'])) {
     }
 }
 
-//Display header
+//Include header
 $pagetitle = 'Register User';
 include('includes/header.php');
 ?>
@@ -80,3 +80,8 @@ include('includes/header.php');
         <p><input type="submit" name="submit"  class="register" value="Register" /></p>
     </fieldset>
 </form>
+
+<?php
+//Include footer
+include('includes/footer.php');
+?>

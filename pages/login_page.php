@@ -33,8 +33,7 @@ include('includes/header.php');
     </fieldset>
 </form>
 
-
-
-
-<!--Include footer -->
-<?php include('includes/footer.php')?>
+<?php
+//Include footer
+include('includes/footer.php');
+?>

@@ -94,5 +94,7 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
     <input type="submit" name="submit" value="Delete account" />
 </form>
 
-<!-- Include footer -->
-<?php include('includes/footer.php') ?>
+<?php
+//Include footer
+include('includes/footer.php');
+?>
