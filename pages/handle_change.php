@@ -82,9 +82,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Build update query for each field filled
             $q = "UPDATE users SET ";
             foreach ($fields as $field => $response) {
+                //Add each updated field to update query
                 if (!empty($_POST[$field])) {
-                    $q .= "$field = '{$user[$field]}', ";
-                    $_SESSION[$field] = $user[$field];
+                    if ($field != 'password') {
+                        $q .= "$field = '{$user[$field]}', ";
+                        $_SESSION[$field] = $user[$field];
+                    }
+                    //Password is updated seperately
+                    else {
+                        $q .= "$field = SHA2('{$user[$field]}', 256), ";
+                    }
                 }
             }
             $q = substr($q, 0, strlen($q)-2); //Remove extra end comma
