@@ -25,15 +25,15 @@ $_SESSION['username'] = $user['username'];
 $_SESSION['email'] = $user['email'];
 $_SESSION['member_type'] = $user['member_type'];
 $_SESSION['member_purpose'] = $user['member_purpose'];
-$_SESSION['regdate'] = $user['is_admin'];
+$_SESSION['regdate'] = $user['regdate'];
 
 //Display content
 echo "<h3>{$user['firstname']} {$user['lastname']}</h3>";
 echo "<h4>{$user['username']}</h4>";
-echo "<p class=\"userdetails\">
-    <b>Email address:</b> {$user['email']}</p>
-    <b>User type:</b>" . ucfirst($user['member_type']) .
-    "<b>User status:</b>" . ucfirst($user['member_purpose']);
+echo "<p class=\"userdetails\">" . 
+    "<b>Email address:</b>" . $user['email'] . "<br>
+    <b>User type:</b>" . ucfirst($user['member_type']) . "<br>
+    <b>User status:</b>" . ucfirst($user['member_purpose']) . "</p>";
 echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log out</button>";
 
 //Include footer

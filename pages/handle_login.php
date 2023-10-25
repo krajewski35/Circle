@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $user['email'];
             $_SESSION['member_type'] = $user['membertype'];
             $_SESSION['member_purpose'] = $user['memberpurpose'];
-            $_SESSION['regdate'] = $user['is_admin'];
+            $_SESSION['regdate'] = $user['regdate'];
             
             //Redirect to admin page if user is admin
             if ($user['memberpurpose'] == 'admin') {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Redirect to user page if user is not admin
             else {
                 //Redirect user
-                header("Location: user_page.php");
+                header("Location: user_settings.php");
                 //Quit script
                 exit();
             }
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //Invalid credentials
         else
         {
-            $errors[] = 'Invalid credentials';
+            $errors[] = 'Invalid credentials. Please try again!';
         }
     }
     
