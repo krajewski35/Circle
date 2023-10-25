@@ -42,7 +42,7 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <input type="text" name="username" class="change" size="20" maxlength="31" value=<?php echo "\"{$_SESSION['username']}\""; ?> /><br>
             <!-- Email Address -->
             <label for="email" class="change">Change Email Address</label><br>
-            <input type="email" name="email" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['email']}\""; ?> /><br>
+            <input type="email" name="email" class="change" size="20" maxlength="255" /><br>
             <!-- Confirm Email -->
             <label for="email" class="change">Confirm Email Address</label><br>
             <input type="email" name="emailconfirm" class="change" size="20" maxlength="255" /><br>

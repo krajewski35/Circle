@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     //Check if conformation field is needed for email change
-    if ($_POST['email'] != $_SESSION['email'] && (empty($_POST['email']) xor empty($_POST['emailconfirm']))) {
+    if (empty($_POST['email']) xor empty($_POST['emailconfirm'])) {
         $errors[] = 'Your emails do not match';
     //Check if conformation field is needed for password change
     } elseif (empty($_POST['password']) xor empty($_POST['passwordconfirm'])) {
