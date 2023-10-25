@@ -24,7 +24,7 @@ include('includes/header.php');
 <form action="handle_register.php" method="post" align="center" class="login">
     <fieldset class="login">
         <p>
-            <b>*Required Field</b>
+            <p><b>*Required Field</b></p>
             <!-- First name -->
             <label for="firstname" class="login">*First Name</label><br>
             <input type="text" name="firstname" class="login" size="20" maxlength="255" required /><br>
