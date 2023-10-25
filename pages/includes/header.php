@@ -26,34 +26,24 @@
                     <!-- All user access -->
                     <li class="navigation"><a href="index.php" class="navigation">Home</a></li>
                     <?php
-                    //Logged in user access
-                    if (!empty($_SESSION['email'])) {
-                        
-                        //Admin only navigation
-                        if ($_SESSION['membertype'] == 'admin') {
-                            /*
-                            echo '<li class="navigation"><a href="admin_page.php" class="navigation">Admin Page</a></li>';
-                            echo '<li class="navigation"><a href="addproduct_page.php" class="navigation">Add Product</a></li>';
-                            echo '<li class="navigation"><a href="vieworders_page.php" class="navigation">View Orders</a></li>';
-                            */
-                        }
-                        //User only navigation
-                        else {
-                            echo '<li class="navigation"><a href="user_settings.php" class="navigation">User Settings</a></li>';
-                        }
-                        /*
-                        //User & Admin navigation
-                        echo '<li class="navigation"><a href="cart_page.php" class="navigation">Cart</a></li>';
-                        */
-                        
-                    }
                     //Logged out user access
-                    else {
+                    if (empty($_SESSION['email'])) {
+                        //Registration page
                         echo '<li class="navigation"><a href="register_page.php" class="navigation">Register User</a></li>';
                     }
+                    //Logged in user access
+                    else {
+                        //Admin only navigation
+                        if ($_SESSION['membertype'] == 'admin') {
+                            //User list
+                            echo '<li class="navigation"><a href="user_list.php" class="navigation">User List</a></li>';
+                        }
+                        //User settings
+                        echo '<li class="navigation"><a href="user_settings.php" class="navigation">User Settings</a></li>';
+                    }
                     ?>
-                    <!-- Log in/out page -->
-                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? '"login_page.php"' : '"logout_page.php"' ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li> 
+                    <!-- Log in / Log out page -->
+                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? '"login_page.php"' : '"logout_page.php"' ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
                 </ul>
             </div>
         </div>

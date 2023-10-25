@@ -7,11 +7,6 @@ if (empty($_SESSION['email'])) {
     header("Location: login_page.php");
     exit();
 }
-//Redirect to admin page if user is admin
-elseif ($_SESSION['membertype'] == 'admin') {
-    header("Location: admin_page.php");
-    exit();
-}
 
 //Include header
 $pagetitle = 'User Settings';
@@ -71,11 +66,18 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <select name="memberpurpose" id="memberpurpose">
                 <?php 
                 //Add dropdown option for each member purpose
-                $memberpurpose = array(
-                    'volunteer' => 'I want to volunteer',
-                    'cause' => 'I need help or support for my cause',
-                    'sponsor' => 'I want to provide rewards for volunteers',
-                );
+
+                //Avoid admin from changing account type
+                 if ($_SESSION['membertype'] != 'admin') {
+                    $memberpurpose = array(
+                        'volunteer' => 'I want to volunteer',
+                        'cause' => 'I need help or support for my cause',
+                        'sponsor' => 'I want to provide rewards for volunteers',
+                    );
+                }
+                else {
+                    $memberpurpose = array();
+                }
                 $ucpurpose = ucfirst($_SESSION['memberpurpose']);
                 echo "<option value=\"{$_SESSION['memberpurpose']}\" selected disabled hidden>$ucpurpose</option>";
                 foreach ($memberpurpose as $purpose => $description) {
