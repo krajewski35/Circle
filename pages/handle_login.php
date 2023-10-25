@@ -43,20 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['memberpurpose'] = $user['memberpurpose'];
             $_SESSION['regdate'] = $user['regdate'];
             
-            //Redirect to admin page if user is admin
-            if ($user['memberpurpose'] == 'admin') {
-                //Redirect user
-                header("Location: admin_page.php");
-                //Quit script
-                exit();
-            }
-            //Redirect to user page if user is not admin
-            else {
-                //Redirect user
-                header("Location: user_settings.php");
-                //Quit script
-                exit();
-            }
+            //Redirect to user settings on login
+            header("Location: user_settings.php");
+            //Quit script
+            exit();
         }
         //Invalid credentials
         else

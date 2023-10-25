@@ -8,7 +8,8 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//Make sure request to delete is directly from user settings and is not admin
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin') {
 
     //Connect to database
     require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
@@ -41,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = 'Issue with deletion system. Please contact the Circle team for support.';
     }
 }
+//Display error if on page by mistake
 else {
     //Include header
     $pagetitle = 'Error';
