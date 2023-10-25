@@ -59,11 +59,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Check if all fields filled in
     if (empty($errors)) {
 
-        //Check if user already exists
-        $q = "SELECT email FROM users WHERE email = '{$user['email']}'";
+        //Check if user already exists by email or username
+        $q = "SELECT email, username FROM users WHERE email = '{$user['email']}' OR username = '{$user['username']}'";
         $r = @mysqli_query($dbc, $q);
-        if (mysqli_num_rows($r) == 1) {
-            $errors[] = 'This email is already used. Please try again!';
+        if (mysqli_num_rows($r) >= 1) {
+            while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+                if ($row['email'] == $user['email']) {
+                    $errors[] = 'This email is already used. Please log in instead!';
+                } elseif ($row['username'] == $user['username']) {
+                    $errors[] = 'This username is already used. Please log in instead!';
+                }
+            }
         }
 
         //Add user to database
