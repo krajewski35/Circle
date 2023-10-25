@@ -1,4 +1,7 @@
 <?php
+//Start session
+session_start();
+
 //Display header
 $pagetitle = 'Circle Volunteering';
 include('includes/header.php');
