@@ -68,7 +68,7 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
                 //Add dropdown option for each member purpose
 
                 //Avoid admin from changing account type
-                 if ($_SESSION['membertype'] != 'admin') {
+                 if ($_SESSION['memberpurpose'] != 'admin') {
                     $memberpurpose = array(
                         'volunteer' => 'I want to volunteer',
                         'cause' => 'I need help or support for my cause',

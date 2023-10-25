@@ -34,7 +34,7 @@
                     //Logged in user access
                     else {
                         //Admin only navigation
-                        if ($_SESSION['membertype'] == 'admin') {
+                        if ($_SESSION['memberpurpose'] == 'admin') {
                             //User list
                             echo '<li class="navigation"><a href="user_list.php" class="navigation">User List</a></li>';
                         }

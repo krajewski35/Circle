@@ -8,7 +8,7 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 //Redirect to admin page if user is not admin
-elseif ($_SESSION['membertype'] != 'admin') {
+elseif ($_SESSION['memberpurpose'] != 'admin') {
     header("Location: index.php");
     exit();
 }
