@@ -50,10 +50,11 @@ include('includes/header.php');
             <select name="membertype" id="membertype">
                 <?php 
                 //Add dropdown option for each member type
-                $member_type = array("", "individual", "organization");
+                $member_type = array("individual", "organization");
+                echo "<option value=\"\" selected disabled hidden>Select an Option</option>";
                 foreach ($member_type as $type) {
                     $uctype = ucfirst($type);
-                    echo "<option value=\"$type\">{$uctype}</option>";
+                    echo "<option value=\"$type\">$uctype</option>";
                 }
                 ?>
             </select><br>
@@ -63,11 +64,11 @@ include('includes/header.php');
                 <?php 
                 //Add dropdown option for each member purpose
                 $member_purpose = array(
-                    '' => '',
                     'volunteer' => 'I want to volunteer',
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
+                echo "<option value=\"\" selected disabled hidden>Select an Option</option>";
                 foreach ($member_purpose as $purpose => $description) {
                     echo "<option value=\"$purpose\">$description</option>";
                 }

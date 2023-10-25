@@ -36,13 +36,13 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <input type="text" name="firstname" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['firstname']}\""; ?> /><br>
             <!-- Last name -->
             <label for="lastname" class="change">Change Last Name</label><br>
-            <input type="text" name="lastname" class="change" size="20" maxlength="255" /><br>
+            <input type="text" name="lastname" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['lastname']}\""; ?> /><br>
             <!-- Username -->
             <label for="username" class="change">Change Public Username</label><br>
-            <input type="text" name="username" class="change" size="20" maxlength="31" /><br>
+            <input type="text" name="username" class="change" size="20" maxlength="31" value=<?php echo "\"{$_SESSION['username']}\""; ?> /><br>
             <!-- Email Address -->
             <label for="email" class="change">Change Email Address</label><br>
-            <input type="email" name="email" class="change" size="20" maxlength="255" /><br>
+            <input type="email" name="email" class="change" size="20" maxlength="255" value=<?php echo "\"{$_SESSION['email']}\""; ?> /><br>
             <!-- Confirm Email -->
             <label for="email" class="change">Confirm Email Address</label><br>
             <input type="email" name="emailconfirm" class="change" size="20" maxlength="255" /><br>
@@ -56,11 +56,13 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
             <label for="membertype" class="change">Change member type</label><br>
             <select name="membertype" id="membertype">
                 <?php 
-                //Add dropdown option for each member type
-                $member_type = array("", "individual", "organization");
+                //Add dropdown option for each member type (Order based on current type)
+                $member_type = array('individual', 'organization');
+                $uctype = ucfirst($_SESSION['member_type']);
+                echo "<option value=\"{$_SESSION['member_type']}\" selected disabled hidden>$uctype</option>";
                 foreach ($member_type as $type) {
                     $uctype = ucfirst($type);
-                    echo "<option value=\"$type\">{$uctype}</option>";
+                    echo "<option value=\"$type\">$uctype</option>";
                 }
                 ?>
             </select><br>
@@ -70,11 +72,12 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
                 <?php 
                 //Add dropdown option for each member purpose
                 $member_purpose = array(
-                    '' => '',
                     'volunteer' => 'I want to volunteer',
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
+                $ucpurpose = ucfirst($_SESSION['member_purpose']);
+                echo "<option value=\"{$_SESSION['member_purpose']}\" selected disabled hidden>$ucpurpose</option>";
                 foreach ($member_purpose as $purpose => $description) {
                     echo "<option value=\"$purpose\">$description</option>";
                 }
