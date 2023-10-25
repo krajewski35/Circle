@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'password' => 'passwordconfirm',
     );
 
-    //Check if main and confirmation field match
+    //Check if main and confirmation field match if both are filled
     foreach ($confirm_fields as $field => $confirm_field) {
         //Check if both fields are not empty
         if (!empty($_POST[$field]) && !empty($_POST[$confirm_field])) {
@@ -45,14 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($_POST[$field] != $_POST[$confirm_field]) {
                 $errors[] = 'Your ' . $field . 's do not match';
             }
-        //Check if conformation field is needed for email
-        } elseif ($field == 'email' && $_POST['email'] != $_SESSION['email'] && empty($_POST['emailconfirm'])) {
-            $errors[] = 'Your emails do not match';
-        
-        //Check if conformation field is needed for password
-        } elseif ($field == 'password' && !empty($_POST['password']) && empty($_POST['passwordconfirm'])) {
-            $errors[] = 'Your passwords do not match';
         }
+    }
+    //Check if conformation field is needed for email change
+    if ($_POST['email'] != $_SESSION['email'] && (empty($_POST['email']) xor empty($_POST['emailconfirm']))) {
+        $errors[] = 'Your emails do not match';
+    //Check if conformation field is needed for password change
+    } elseif (empty($_POST['password']) xor empty($_POST['passwordconfirm'])) {
+        $errors[] = 'Your passwords do not match';
     }
 
     //Check if no issues with changing info
