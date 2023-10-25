@@ -87,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION[$field] = $user[$field];
                 }
             }
-            $q = substr($q, 0, strlen($q)-3); //Remove extra end comma
-            $q .= "WHERE email='$prevemail'";
+            $q = substr($q, 0, strlen($q)-2); //Remove extra end comma
+            $q .= " WHERE email='$prevemail'";
 
             echo "Query: $q<br>"; //DEBUGGING
 
