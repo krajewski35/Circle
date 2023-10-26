@@ -10,7 +10,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 <header>
 <div class= "content-wrap">
     <h2> testing</h2>
-    <?php phpinfo(); ?>
     <p>testing some more  </p>
     </div>
 </header>
