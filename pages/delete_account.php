@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
         $_SESSION['regdate'] = '';
 
         //Include header
-        $pagetitle = 'User Settings';
+        $pagetitle = 'Account Deletion';
         include('includes/header.php');
 
         //Deletion prompt
@@ -48,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
     $pagetitle = 'Error';
     include('includes/header.php');
 
-    echo "<h3>You cannot delete your account as an admin here!</h3>";
+    echo "<h3>You cannot delete your account as an admin!</h3>";
     echo "<p>Please ask to delete your account to a different admin under the user list.</p>";
-    echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
+    echo "<button type=\"button\" onclick=\"location.href='user_settings.php'\">Back to user settings</button>";
 }
 
 //Display error if on page by mistake

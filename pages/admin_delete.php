@@ -13,7 +13,7 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
     exit();
 }
 
-//Make sure request to delete is directly from user settings and is not admin
+//Make sure request to delete is directly from user list
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Connect to database

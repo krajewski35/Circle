@@ -53,7 +53,7 @@ if ($num_rows > 0) {
 
         //Gather list of emails and admin status
         $user_list[$i]['email'] = $row['email'];
-        $user_list[$i]['admin'] = $row['memberpurpose'] == 'admin' ? 'Remove Admin' : 'Make Admin';
+        $user_list[$i]['admin'] = ($row['memberpurpose'] == 'admin');
         
         //Print user table
         $ucmembertype = ucfirst($row['membertype']);
@@ -82,20 +82,29 @@ if ($num_rows > 0) {
     
     //Show user emails and admin change and delete account actions for each account
     foreach ($user_list as $user) {
-        echo "<tr>
-            <td>{$user['email']}</td>
-            <td>
-                <form action=\"admin_change.php\" method=\"post\">
-                    <input type=\"hidden\" name=\"email\" value = \"{$user['email']}\">
-                    <input type=\"submit\" name=\"submit\" value=\"{$user['admin']}\" />
-                </form>
-            </td>
-            <td>
-                <form action=\"admin_delete.php\" method=\"post\">
-                    <input type=\"hidden\" name=\"email\" value = \"{$user['email']}\">
-                    <input type=\"submit\" name=\"submit\" value=\"Delete Account\" />
-                </form>
-            </td></tr>";
+        $admin_action = $user['admin'] ? 'Remove Admin' : 'Make Admin';
+        echo "<tr><td>{$user['email']}</td>";
+        //Print actions if not the signed in user
+        if ($user['email'] != $_SESSION['email']) {
+            echo "<td>
+                    <form action=\"admin_change.php\" method=\"post\">
+                        <input type=\"hidden\" name=\"email\" value=\"{$user['email']}\">
+                        <input type=\"hidden\" name=\"admin\" value=\"{$user['admin']}\">
+                        <input type=\"submit\" name=\"submit\" value=\"$admin_action\" />
+                    </form>
+                </td>
+                <td>
+                    <form action=\"admin_delete.php\" method=\"post\">
+                        <input type=\"hidden\" name=\"email\" value=\"{$user['email']}\">
+                        <input type=\"submit\" name=\"submit\" value=\"Delete Account\" />
+                    </form>
+                </td></tr>";
+        }
+        //Do not print action buttons if the signed in user
+        else {
+            echo "<td>Cannot change</td>
+                <td>Cannot delete</td></tr>";
+        }
     }
     echo '</table></div>';
 }
