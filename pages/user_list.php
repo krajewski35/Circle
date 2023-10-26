@@ -50,13 +50,15 @@ if ($num_rows > 0) {
         $regdate = date('m/d/Y', strtotime($row['regdate']));
         
         //Print user table
+        $ucmembertype = ucfirst($row['membertype']);
+        $ucmemberpurpose = ucfirst($row['memberpurpose']);
         echo "<tr>
             <td>{$row['username']}</td>
             <td>{$row['firstname']}</td>
             <td>{$row['lastname']}</td>
             <td>{$row['email']}</td>
-            <td>{$row['membertype']}</td>
-            <td>{$row['memberpurpose']}</td>
+            <td>$ucmembertype</td>
+            <td>$ucmemberpurpose</td>
             <td>$regdate</td>
             </tr>";
     }
