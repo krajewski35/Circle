@@ -13,6 +13,8 @@ $pagetitle = 'Log in';
 include('../includes/header.php');
 ?>
 
+<?php echo "Directory: " . __DIR__ ?>
+
 <!-- Login form -->
 <form action="handle_login.php" method="post" align="center" class="login">
     <fieldset class="login">
