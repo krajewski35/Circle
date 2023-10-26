@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     //Include header
     $pagetitle = 'Invalid login';
-    include('../includes/header.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
     
     //List errors
     echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
@@ -68,6 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "</ul></p><button type=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
     
     //Include footer
-    include('../includes/footer.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 }
 ?>

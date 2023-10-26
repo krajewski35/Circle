@@ -10,7 +10,7 @@ if (!empty($_SESSION['email'])) {
 
 //Include header
 $pagetitle = 'Register User';
-include('../includes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 ?>
 
 <!-- User Registration Form -->
@@ -76,5 +76,5 @@ include('../includes/header.php');
 
 <?php
 //Include footer
-include('../includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

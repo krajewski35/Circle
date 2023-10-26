@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($r) {
         //Include header
         $pagetitle = 'Account Admin Change';
-        include('../../includes/header.php');
+        include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
         //Change prompt
         echo "<h3>You have successfully changed this account's admin status: {$_POST['email']}</h3>";
@@ -45,12 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else {
     //Include header
     $pagetitle = 'Error';
-    include('../../includes/header.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
     echo "<h3>You ended up on this page by mistake</h3>";
     echo "<button type=\"button\" onclick=\"location.href='../../index.php'\">Back to home</button>";
 }
 
 //Include footer
-include('includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

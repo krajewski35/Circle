@@ -1,7 +1,7 @@
 <?php
 //Include header
 $pagetitle = 'Registration';
-include('../includes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
@@ -104,5 +104,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 //Include footer
-include('../includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

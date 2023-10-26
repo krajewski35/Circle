@@ -4,7 +4,7 @@ session_start();
 
 //Display header
 $pagetitle = 'Circle Volunteering';
-include('includes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 ?>
 
 <header>
@@ -23,5 +23,5 @@ include('includes/header.php');
 
 <?php
 //Include footer
-include('includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

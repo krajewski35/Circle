@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
 
         //Include header
         $pagetitle = 'Account Deletion';
-        include('../includes/header.php');
+        include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
         //Deletion prompt
         echo "<h3>You have successfully deleted your account!</h3>";
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
 } elseif ($_SESSION['memberpurpose'] == 'admin') {
     //Include header
     $pagetitle = 'Error';
-    include('../includes/header.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
     echo "<h3>You cannot delete your account as an admin!</h3>";
     echo "<p>Please ask to delete your account to a different admin under the user list.</p>";
@@ -57,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
 else {
     //Include header
     $pagetitle = 'Error';
-    include('../includes/header.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
     echo "<h3>You ended up on this page by mistake</h3>";
     echo "<button type=\"button\" onclick=\"location.href='../index.php'\">Back to home</button>";
 }
 
 //Include footer
-include('../includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

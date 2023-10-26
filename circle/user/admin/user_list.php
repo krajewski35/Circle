@@ -15,7 +15,7 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
 
 //Include header
 $pagetitle = 'User List';
-include('../../includes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
 //Retrieve and print user list from database
 
@@ -117,5 +117,5 @@ else {
 mysqli_close($dbc);
 
 //Include footer
-include('../../includes/footer.php')
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>

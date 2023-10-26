@@ -10,7 +10,7 @@ if (!empty($_SESSION['email'])) {
 
 //Display header
 $pagetitle = 'Log in';
-include('../includes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 ?>
 
 <!-- Login form -->
@@ -28,5 +28,5 @@ include('../includes/header.php');
 
 <?php
 //Include footer
-include('../includes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
 ?>
