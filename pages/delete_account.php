@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
     include('includes/header.php');
 
     echo "<h3>You cannot delete your account as an admin here!</h3>";
-    echo "<p>Please ask to delete you account with a different admin under the user list.</p>";
+    echo "<p>Please ask to delete your account to a different admin under the user list.</p>";
     echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
 }
 
