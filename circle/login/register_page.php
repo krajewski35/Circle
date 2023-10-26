@@ -11,11 +11,10 @@ if (!empty($_SESSION['email'])) {
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
-$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Include header
 $pagetitle = 'Register User';
-require($dbpath);
+include("$homepath/includes/header.php");
 ?>
 
 <!-- User Registration Form -->
