@@ -25,7 +25,7 @@
                     <?php
                     //All user access
                     //logo
-                    echo "<li><img src=<?php echo '\'$homepath/images/cir_favicon.png\' ?> height='50' length='50' class='site-name'li>";
+                    echo "<li><img src=<?php echo '\'$urlpath/images/cir_favicon.png\' ?> height='50' length='50' class='site-name'li>";
 
                     echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
                     
