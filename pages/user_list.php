@@ -45,9 +45,13 @@ if ($num_rows > 0) {
         </tr>';
     
     //Show results
+    $email_list = array();
     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
         //Format registration date and admin status
         $regdate = date('m/d/Y', strtotime($row['regdate']));
+
+        //Gather list of emails
+        $email_list[] = $row['email'];
         
         //Print user table
         $ucmembertype = ucfirst($row['membertype']);
@@ -62,7 +66,25 @@ if ($num_rows > 0) {
             <td>$regdate</td>
             </tr>";
     }
+    echo '</table></div>';
+
+    //Display list of actions for emails
+    //Print header of table
+    echo '<div id = "usertable"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%">
+        <tr>
+        <th>User</th>
+        <th>Make/Remove Admin</th>
+        <th>Delete Account</th>
+        </tr>';
     
+    //Show emails
+    foreach ($email_list as $email) {
+        echo "<tr>
+            <td>$email</td>
+            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"\" /></form></td>
+            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"Delete\" /></form></td>
+            </tr>";
+    }
     echo '</table></div>';
 }
 //No results found
