@@ -3,24 +3,25 @@
     <head>
         <!-- Define homepath with PHP -->
         <?php $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle' ?>
+        <?php $urlpath = $_SERVER['HTTP_POST'] . '/circle' ?>
 
         <!-- Basic Header -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title><?php echo "$pagetitle" ?> - Circle</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href=<?php echo "\"$homepath/images/favicon.ico\"" ?> >
+        <link rel="icon" type="image/x-icon" href=<?php echo "\"$urlpath/images/favicon.ico\"" ?> >
 
         <!-- CSS Design -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-        <link rel= "stylesheet" href=<?php echo "\"$homepath/includes/style.css\"" ?> >
+        <link rel= "stylesheet" href=<?php echo "\"$urlpath/includes/style.css\"" ?> >
     </head>
     <body>
         <div id = "header">
             <span id = "site-name">
-                <img src=<?php echo "\"$homepath/images/CircleLogoWeb.png\"" ?> height="105" length="170" class="site-name" align="center">
+                <img src=<?php echo "\"$urlpath/images/CircleLogoWeb.png\"" ?> height="105" length="170" class="site-name" align="center">
             </span>
             
             <div id="navigation">
