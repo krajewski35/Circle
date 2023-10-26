@@ -29,21 +29,21 @@
                     //Logged out user access
                     if (empty($_SESSION['email'])) {
                         //Registration page
-                        echo '<li class="navigation"><a href="register_page.php" class="navigation">Register User</a></li>';
+                        echo '<li class="navigation"><a href="login/register_page.php" class="navigation">Register User</a></li>';
                     }
                     //Logged in user access
                     else {
                         //Admin only navigation
                         if ($_SESSION['memberpurpose'] == 'admin') {
                             //User list
-                            echo '<li class="navigation"><a href="user_list.php" class="navigation">User List</a></li>';
+                            echo '<li class="navigation"><a href="user/admin/user_list.php" class="navigation">User List</a></li>';
                         }
                         //User settings
-                        echo '<li class="navigation"><a href="user_settings.php" class="navigation">User Settings</a></li>';
+                        echo '<li class="navigation"><a href="user/user_settings.php" class="navigation">User Settings</a></li>';
                     }
                     ?>
                     <!-- Log in / Log out page -->
-                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? '"login_page.php"' : '"logout_page.php"' ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
+                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? '"login/login_page.php"' : '"login/logout_page.php"' ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
                 </ul>
             </div>
         </div>

@@ -4,18 +4,18 @@ session_start();
 
 //Redirect to login page if accessed directly
 if (empty($_SESSION['email'])) {
-    header("Location: login_page.php");
+    header("Location: ../../login/login_page.php");
     exit();
 }
 //Redirect to homepage if user is not admin
 elseif ($_SESSION['memberpurpose'] != 'admin') {
-    header("Location: index.php");
+    header("Location: ../../index.php");
     exit();
 }
 
 //Include header
 $pagetitle = 'User List';
-include('includes/header.php');
+include('../../includes/header.php');
 
 //Retrieve and print user list from database
 
@@ -117,5 +117,5 @@ else {
 mysqli_close($dbc);
 
 //Include footer
-include('includes/footer.php')
+include('../../includes/footer.php')
 ?>
