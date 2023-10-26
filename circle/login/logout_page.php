@@ -8,8 +8,9 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
 
 //Erase session variables
 $_SESSION['firstname'] = '';

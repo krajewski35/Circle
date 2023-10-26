@@ -1,6 +1,8 @@
 <?php
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Include header
 $pagetitle = 'Registration';
@@ -8,7 +10,7 @@ include("$homepath/includes/header.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
-    require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
+    require($dbpath);
     
     //Check and retrieve login information
     $errors = array();

@@ -13,8 +13,10 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
     exit();
 }
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Include header
 $pagetitle = 'User List';
@@ -23,7 +25,7 @@ include("$homepath/includes/header.php");
 //Retrieve and print user list from database
 
 //Connect to database
-require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
+require($dbpath);
 
 //Generate and run query
 $q = "SELECT firstname, lastname, username, email, membertype, memberpurpose, regdate FROM users ORDER BY username ASC";

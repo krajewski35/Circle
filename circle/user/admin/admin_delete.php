@@ -13,14 +13,16 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
     exit();
 }
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Make sure request to delete is directly from user list
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Connect to database
-    require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
+    require($dbpath);
 
     //Run deletion query
     $q = "DELETE FROM users WHERE email='{$_POST['email']}'";

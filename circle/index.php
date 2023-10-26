@@ -2,8 +2,10 @@
 //Start session
 session_start();
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Display header
 $pagetitle = 'Circle Volunteering';
