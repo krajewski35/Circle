@@ -51,8 +51,8 @@ if ($num_rows > 0) {
         $regdate = date('m/d/Y', strtotime($row['regdate']));
 
         //Gather list of emails and admin status
-        $user_list['email'][] = $row['email'];
-        $user_list['admin'][] = $row['memberpurpose'] == 'admin' ? 'Make Admin' : 'Remove Admin';
+        $user_list[]['email'] = $row['email'];
+        $user_list[]['admin'] = $row['memberpurpose'] == 'admin' ? 'Make Admin' : 'Remove Admin';
         
         //Print user table
         $ucmembertype = ucfirst($row['membertype']);
