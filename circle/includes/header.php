@@ -20,7 +20,6 @@
     </head>
     <body>
         <div id = "header">
-            
             <div id="navigation">
                 <ul class="navigation">
                     <?php
