@@ -2,9 +2,12 @@
 //Start session
 session_start();
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Display header
 $pagetitle = 'Circle Volunteering';
-include('~/circle/includes/header.php');
+include("$homepath/includes/header.php");
 ?>
 
 <header>
@@ -22,5 +25,5 @@ include('~/circle/includes/header.php');
 
 <?php
 //Include footer
-include('~/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>
