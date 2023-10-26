@@ -2,13 +2,15 @@
 //Start session
 session_start();
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Retrieve form information
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to Database
-    require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
+    require($dbpath);
     
     //Check and retrieve login information
     $errors = array();

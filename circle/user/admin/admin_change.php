@@ -13,14 +13,16 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
     exit();
 }
 
-//Define homepath
+//Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+$urlpath = $_SERVER['HTTP_POST'] . '/circle';
+$dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
 
 //Make sure request to change is directly from user list
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Connect to database
-    require('/home/infost490f2305/mysqli_connect/mysqli_connect.php');
+    require($dbpath);
 
     //Change admin status for query based on previous admin status (volunteer represents not admin)
     $admin_status = $_POST['admin'] ? 'volunteer' : 'admin';

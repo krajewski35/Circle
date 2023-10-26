@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <!-- Define homepath with PHP -->
+        <!-- Define homepaths -->
         <?php $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle' ?>
         <?php $urlpath = $_SERVER['HTTP_POST'] . '/circle' ?>
 
