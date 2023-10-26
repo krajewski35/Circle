@@ -7,8 +7,9 @@ $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
 
 include($_SERVER['DOCUMENT_ROOT'] . '/config/config.php');
+
+echo(HOME_PATH);
 /*
-$homepath = HOME_PATH;
 $urlpath = URL_PATH;
 */
 
