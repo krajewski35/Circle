@@ -45,13 +45,14 @@ if ($num_rows > 0) {
         </tr>';
     
     //Show results
-    $email_list = array();
+    $user_list = array();
     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
         //Format registration date and admin status
         $regdate = date('m/d/Y', strtotime($row['regdate']));
 
-        //Gather list of emails
-        $email_list[] = $row['email'];
+        //Gather list of emails and admin status
+        $user_list['email'][] = $row['email'];
+        $user_list['admin'][] = $row['memberpurpose'] == 'admin' ? 'Make Admin' : 'Remove Admin';
         
         //Print user table
         $ucmembertype = ucfirst($row['membertype']);
@@ -78,10 +79,10 @@ if ($num_rows > 0) {
         </tr>';
     
     //Show emails
-    foreach ($email_list as $email) {
+    foreach ($user_list as $user) {
         echo "<tr>
-            <td>$email</td>
-            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"\" /></form></td>
+            <td>{$user['email']}</td>
+            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"{$user['admin']}\" /></form></td>
             <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"Delete\" /></form></td>
             </tr>";
     }
