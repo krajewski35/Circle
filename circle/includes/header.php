@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width">
         <title><?php echo "$pagetitle" ?> - Circle</title>
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href=<?php echo "\"$urlpath/images/favicon.ico\"" ?> >
+        <link rel="icon" type="image/x-icon" href=<?php echo "\"$urlpath/includes/favicon.ico\"" ?> >
 
         <!-- CSS Design -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
                     <?php
                     //All user access
                     //logo
-                    echo "<li><img src=<?php echo '\'$urlpath/images/cir_favicon.png\' ?> height='50' length='50' class='site-name'li>";
+                    echo "<li><img src=<?php echo '\'$urlpath/images/cir_favicon.png\'' ?> height='50' length='50' class='site-name'li>";
 
                     echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
                     
