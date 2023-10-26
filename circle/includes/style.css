@@ -85,3 +85,8 @@ li a {
 li a:hover {
   background-color: #301934; 
 }
+
+.site-name {
+  margin-left: auto;
+  margin-right: auto;
+}
