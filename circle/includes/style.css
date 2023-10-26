@@ -18,13 +18,6 @@
       line-height: 1.5;
     }
 
-header{
-      background-image: url(circle/images/CircleLogoWeb.png);
-      background-size: 100%;
-    background-position: center;
-    
-    }
-
     a{
       color: #ffe66d;
     }
@@ -91,4 +84,9 @@ li a {
 
 li a:hover {
   background-color: #301934; 
+}
+
+.site-name {
+  margin-left: auto;
+  margin-right: auto;
 }
