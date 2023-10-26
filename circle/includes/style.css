@@ -17,7 +17,14 @@
       font-size: 15px;
       line-height: 1.5;
     }
-    
+
+header{
+      background-image: url(circle/images/3.gif);
+      background-size: 20% 80%;
+    background-position: center;
+      color: #F7FFF7;
+    }
+
     a{
       color: #ffe66d;
     }
