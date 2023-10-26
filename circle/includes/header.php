@@ -28,11 +28,11 @@
                     <?php
                     //All user access
                     echo "<li class=\"navigation\"><a href=\"$homepath/index.php\" class=\"navigation\">Home</a></li>";
-                    //CONTINUE HOMEPATH REPLACEMENT
+                    
                     //Logged out user access
                     if (empty($_SESSION['email'])) {
                         //Registration page
-                        echo '<li class="navigation"><a href="' . $_SERVER['HTTP_HOST'] . '/circle/login/register_page.php" class="navigation">Register User</a></li>';
+                        echo "<li class=\"navigation\"><a href=\"$homepath/login/register_page.php\" class=\"navigation\">Register User</a></li>";
                     }
 
                     //Logged in user access
@@ -40,15 +40,15 @@
                         //Admin only navigation
                         if ($_SESSION['memberpurpose'] == 'admin') {
                             //User list
-                            echo '<li class="navigation"><a href="' . $_SERVER['HTTP_HOST'] . '/circle/user/admin/user_list.php" class="navigation">User List</a></li>';
+                            echo "<li class=\"navigation\"><a href=\"$homepath/user/admin/user_list.php\" class=\"navigation\">User List</a></li>";
                         }
                         //User settings
-                        echo '<li class="navigation"><a href="' . $_SERVER['HTTP_HOST'] . '/circle/user_settings.php" class="navigation">User Settings</a></li>';
+                        echo "<li class=\"navigation\"><a href=\"$homepath/user/user_settings.php\" class=\"navigation\">User Settings</a></li>";
                     }
                     ?>
 
                     <!-- Log in / Log out page -->
-                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? '"' . $_SERVER['HTTP_HOST'] . '/circle/login/login_page.php"' : '"' . $_SERVER['HTTP_HOST'] . '/circle/login/logout_page.php"' ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
+                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? "\"$homepath/login/login_page.php\"" : "\"$homepath/login/logout_page.php\"" ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
                 </ul>
             </div>
         </div>
