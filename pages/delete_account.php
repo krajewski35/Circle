@@ -41,7 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
     else {
         $errors[] = 'Issue with deletion system. Please contact the Circle team for support.';
     }
+
+//Display error to prevent accidental deletion of admin accounts
+} elseif ($_SESSION['memberpurpose'] == 'admin') {
+    //Include header
+    $pagetitle = 'Error';
+    include('includes/header.php');
+
+    echo "<h3>You cannot delete your account as an admin here.<br>
+    Please ask to delete you account with a different admin under the user list.</h3>";
+    echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
 }
+
 //Display error if on page by mistake
 else {
     //Include header
