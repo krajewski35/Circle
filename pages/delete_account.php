@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
         $pagetitle = 'User Settings';
         include('includes/header.php');
 
-        //Log out prompt
+        //Deletion prompt
         echo "<h3>You have successfully deleted your account!</h3>";
         echo "<button type=\"button\" onclick=\"location.href='index.php'\">Back to home</button>";
     }

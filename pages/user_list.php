@@ -7,7 +7,7 @@ if (empty($_SESSION['email'])) {
     header("Location: login_page.php");
     exit();
 }
-//Redirect to admin page if user is not admin
+//Redirect to homepage if user is not admin
 elseif ($_SESSION['memberpurpose'] != 'admin') {
     header("Location: index.php");
     exit();
@@ -46,13 +46,14 @@ if ($num_rows > 0) {
     
     //Show results
     $user_list = array();
+    $i = 0;
     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
         //Format registration date and admin status
         $regdate = date('m/d/Y', strtotime($row['regdate']));
 
         //Gather list of emails and admin status
-        $user_list[]['email'] = $row['email'];
-        $user_list[]['admin'] = $row['memberpurpose'] == 'admin' ? 'Make Admin' : 'Remove Admin';
+        $user_list[$i]['email'] = $row['email'];
+        $user_list[$i]['admin'] = $row['memberpurpose'] == 'admin' ? 'Remove Admin' : 'Make Admin';
         
         //Print user table
         $ucmembertype = ucfirst($row['membertype']);
@@ -66,6 +67,7 @@ if ($num_rows > 0) {
             <td>$ucmemberpurpose</td>
             <td>$regdate</td>
             </tr>";
+        ++$i;
     }
     echo '</table></div>';
 
@@ -78,13 +80,22 @@ if ($num_rows > 0) {
         <th>Delete Account</th>
         </tr>';
     
-    //Show emails
+    //Show user emails and admin change and delete account actions for each account
     foreach ($user_list as $user) {
         echo "<tr>
             <td>{$user['email']}</td>
-            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"{$user['admin']}\" /></form></td>
-            <td><form action=\"handle_change.php\" method=\"post\"><input type=\"submit\" name=\"submit\" value=\"Delete\" /></form></td>
-            </tr>";
+            <td>
+                <form action=\"admin_change.php\" method=\"post\">
+                    <input type=\"hidden\" name=\"email\" value = \"{$user['email']}\">
+                    <input type=\"submit\" name=\"submit\" value=\"{$user['admin']}\" />
+                </form>
+            </td>
+            <td>
+                <form action=\"admin_delete.php\" method=\"post\">
+                    <input type=\"hidden\" name=\"email\" value = \"{$user['email']}\">
+                    <input type=\"submit\" name=\"submit\" value=\"Delete Account\" />
+                </form>
+            </td></tr>";
     }
     echo '</table></div>';
 }
