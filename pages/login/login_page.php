@@ -2,22 +2,15 @@
 //Start session
 session_start();
 
-//Redirect to user page if already logged in
+//Redirect to user settings if already logged in
 if (!empty($_SESSION['email'])) {
-    //Redirect to user or admin page based on user admin status
-    if ($_SESSION['membertype'] == 'admin') {
-        header("Location: admin_page.php");
-        exit();
-    }
-    else {
-        header("Location: user_settings.php");
-        exit();
-    }
+    header("Location: ../user/user_settings.php");
+    exit();
 }
 
 //Display header
 $pagetitle = 'Log in';
-include('includes/header.php');
+include('../includes/header.php');
 ?>
 
 <!-- Login form -->
@@ -35,5 +28,5 @@ include('includes/header.php');
 
 <?php
 //Include footer
-include('includes/footer.php');
+include('../includes/footer.php');
 ?>

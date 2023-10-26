@@ -4,7 +4,7 @@ session_start();
 
 //Redirect to login page if accessed directly
 if (empty($_SESSION['email'])) {
-    header("Location: login_page.php");
+    header("Location: ../login_page.php");
     exit();
 }
 //Redirect to homepage if user is not admin
@@ -27,13 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $r = @mysqli_query($dbc, $q);
     mysqli_close($dbc);
 
-    //Check if deletion successful
+    //Check if change successful
     if ($r) {
         //Include header
         $pagetitle = 'Account Admin Change';
         include('includes/header.php');
 
-        //Deletion prompt
+        //Change prompt
         echo "<h3>You have successfully changed this account's admin status: {$_POST['email']}</h3>";
         echo "<button type=\"button\" onclick=\"location.href='user_list.php'\">Back to user list</button>";
     }

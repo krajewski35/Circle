@@ -4,7 +4,7 @@ session_start();
 
 //Include header
 $pagetitle = 'Registration';
-include('includes/header.php');
+include('../includes/header.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
@@ -127,5 +127,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 //Include footer
-include('includes/footer.php');
+include('../includes/footer.php');
 ?>

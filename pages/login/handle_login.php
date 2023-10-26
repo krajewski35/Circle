@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = 'You forgot to enter a password';
     }
     
-    //Check if all fields filled in
+    //Check if all fields filled in (No errors)
     if (empty($errors)) {
         //Query username credentials
         $q = "SELECT firstname, lastname, username, email, membertype, memberpurpose, regdate FROM users WHERE email = '$email' AND password = SHA2('$password', 256)";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['regdate'] = $user['regdate'];
             
             //Redirect to user settings on login
-            header("Location: user_settings.php");
+            header("Location: ../user/user_settings.php");
             //Quit script
             exit();
         }
@@ -57,17 +57,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     //Include header
     $pagetitle = 'Invalid login';
-    include('includes/header.php');
+    include('../includes/header.php');
     
-    //Redirect back to login page with errors
+    //List errors
     echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
     foreach($errors as $error) {
         echo "<li>- $error -</li>";
     }
-    //Redirect user
+    //Button to redirect user back to login page
     echo "</ul></p><button type=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
     
     //Include footer
-    include('includes/footer.php');
+    include('../includes/footer.php');
 }
 ?>

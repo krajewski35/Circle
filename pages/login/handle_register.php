@@ -1,7 +1,7 @@
 <?php
 //Include header
 $pagetitle = 'Registration';
-include('includes/header.php');
+include('../includes/header.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
@@ -59,9 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Check if all fields filled in
     if (empty($errors)) {
 
-        //Check if user already exists by email or username
+        //Check if user already exists by querying email or username
         $q = "SELECT email, username FROM users WHERE email = '{$user['email']}' OR username = '{$user['username']}'";
         $r = @mysqli_query($dbc, $q);
+        //Store error if user already exists from duplicate username or email
         if (mysqli_num_rows($r) >= 1) {
             while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
                 if ($row['email'] == $user['email']) {
@@ -92,16 +93,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     if (!empty($errors)) {
-        //Redirect back to registration page with errors
+        //List errors
         echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
         foreach($errors as $error) {
             echo "<li>$error</li>";
         }
-        //Redirect user
+        //Button to redirect user back to registration page
         echo "</p><button type=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
     }
 }
 
 //Include footer
-include('includes/footer.php');
+include('../includes/footer.php');
 ?>

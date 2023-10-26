@@ -4,13 +4,13 @@ session_start();
 
 //Redirect to login page if accessed directly
 if (empty($_SESSION['email'])) {
-    header("Location: login_page.php");
+    header("Location: ../login/login_page.php");
     exit();
 }
 
 //Include header
 $pagetitle = 'User Settings';
-include('includes/header.php');
+include('../includes/header.php');
 
 //Display content
 echo "<h3>{$_SESSION['firstname']} {$_SESSION['lastname']}</h3>";
@@ -19,7 +19,7 @@ echo "<p class=\"userdetails\">" .
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
     <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
     <b>User status: </b>" . ucfirst($_SESSION['memberpurpose']) . "</p>";
-echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log out</button>";
+echo "<button type=\"button\" onclick=\"location.href='../login/logout_page.php'\">Log out</button>";
 ?>
 
 <!-- Information change form -->
@@ -98,5 +98,5 @@ echo "<button type=\"button\" onclick=\"location.href='logout_page.php'\">Log ou
 
 <?php
 //Include footer
-include('includes/footer.php');
+include('../includes/footer.php');
 ?>
