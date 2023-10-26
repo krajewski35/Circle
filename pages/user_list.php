@@ -20,7 +20,7 @@ include('includes/header.php');
 //Retrieve and print user list from database
 
 //Connect to database
-require('mysqli_connect.php');
+require('~/mysqli_connect/mysqli_connect.php');
 
 //Generate and run query
 $q = "SELECT firstname, lastname, username, email, membertype, memberpurpose, regdate FROM users ORDER BY username ASC";
