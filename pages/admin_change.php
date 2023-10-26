@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $admin_status = $_POST['admin'] ? 'volunteer' : 'admin';
 
     //Run update query
-    $q = "UPDATE users SET memberpurpose='' WHERE email='{$_POST['email']}'";
+    $q = "UPDATE users SET memberpurpose='$admin_status' WHERE email='{$_POST['email']}'";
     $r = @mysqli_query($dbc, $q);
     mysqli_close($dbc);
 
