@@ -13,9 +13,12 @@ elseif ($_SESSION['memberpurpose'] != 'admin') {
     exit();
 }
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Include header
 $pagetitle = 'User List';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
 
 //Retrieve and print user list from database
 
@@ -117,5 +120,5 @@ else {
 mysqli_close($dbc);
 
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>

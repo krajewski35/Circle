@@ -8,6 +8,9 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Erase session variables
 $_SESSION['firstname'] = '';
 $_SESSION['lastname'] = '';
@@ -19,12 +22,12 @@ $_SESSION['regdate'] = '';
 
 //Include header
 $pagetitle = 'Log out';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
 
 //Log out prompt
 echo "<h3>You have successfully logged out!</h3>";
 echo "<button type=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
 
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>

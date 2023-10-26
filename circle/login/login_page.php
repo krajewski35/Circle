@@ -8,9 +8,12 @@ if (!empty($_SESSION['email'])) {
     exit();
 }
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Display header
 $pagetitle = 'Log in';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
 ?>
 
 <!-- Login form -->
@@ -28,5 +31,5 @@ include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
 <?php
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>

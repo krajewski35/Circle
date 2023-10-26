@@ -4,7 +4,10 @@ session_start();
 
 //Include header
 $pagetitle = 'Registration';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
+
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Connect to database
@@ -127,5 +130,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>

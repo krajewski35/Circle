@@ -8,9 +8,12 @@ if (empty($_SESSION['email'])) {
     exit();
 }
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Include header
 $pagetitle = 'User Settings';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
 
 //Display content
 echo "<h3>{$_SESSION['firstname']} {$_SESSION['lastname']}</h3>";
@@ -98,5 +101,5 @@ echo "<button type=\"button\" onclick=\"location.href='../login/logout_page.php'
 
 <?php
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>

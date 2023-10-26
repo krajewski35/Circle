@@ -8,9 +8,12 @@ if (!empty($_SESSION['email'])) {
     exit();
 }
 
+//Define homepath
+$homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
+
 //Include header
 $pagetitle = 'Register User';
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
+include("$homepath/includes/header.php");
 ?>
 
 <!-- User Registration Form -->
@@ -76,5 +79,5 @@ include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/header.php');
 
 <?php
 //Include footer
-include($_SERVER['DOCUMENT_ROOT'] . '/circle/includes/footer.php');
+include("$homepath/includes/footer.php");
 ?>
