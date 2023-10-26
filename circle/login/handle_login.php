@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['regdate'] = $user['regdate'];
             
             //Redirect to user settings on login
-            header("Location: ../user/user_settings.php");
+            header("Location: $urlpath/user/user_settings.php");
             //Quit script
             exit();
         }
