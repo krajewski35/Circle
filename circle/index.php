@@ -3,7 +3,7 @@
 session_start();
 
 //Define homepaths
-include('config/config.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/config/config.php');
 $homepath = HOME_PATH;
 $urlpath = URL_PATH;
 $dbpath = DB_PATH;
