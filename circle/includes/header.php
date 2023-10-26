@@ -4,7 +4,6 @@
         <!-- Define homepath with PHP -->
         <?php $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle' ?>
         <?php $urlpath = $_SERVER['HTTP_POST'] . '/circle' ?>
-        <?php $homepath = $_SERVER['HTTP_POST'] . '/circle' ?> <!-- DEBUGGING -->
 
         <!-- Basic Header -->
         <meta charset="utf-8">
@@ -29,12 +28,12 @@
                 <ul class="navigation">
                     <?php
                     //All user access
-                    echo "<li class=\"navigation\"><a href=\"$homepath/index.php\" class=\"navigation\">Home</a></li>";
+                    echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
                     
                     //Logged out user access
                     if (empty($_SESSION['email'])) {
                         //Registration page
-                        echo "<li class=\"navigation\"><a href=\"$homepath/login/register_page.php\" class=\"navigation\">Register User</a></li>";
+                        echo "<li class=\"navigation\"><a href=\"$urlpath/login/register_page.php\" class=\"navigation\">Register User</a></li>";
                     }
 
                     //Logged in user access
@@ -42,15 +41,15 @@
                         //Admin only navigation
                         if ($_SESSION['memberpurpose'] == 'admin') {
                             //User list
-                            echo "<li class=\"navigation\"><a href=\"$homepath/user/admin/user_list.php\" class=\"navigation\">User List</a></li>";
+                            echo "<li class=\"navigation\"><a href=\"$urlpath/user/admin/user_list.php\" class=\"navigation\">User List</a></li>";
                         }
                         //User settings
-                        echo "<li class=\"navigation\"><a href=\"$homepath/user/user_settings.php\" class=\"navigation\">User Settings</a></li>";
+                        echo "<li class=\"navigation\"><a href=\"$urlpath/user/user_settings.php\" class=\"navigation\">User Settings</a></li>";
                     }
                     ?>
 
                     <!-- Log in / Log out page -->
-                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? "\"$homepath/login/login_page.php\"" : "\"$homepath/login/logout_page.php\"" ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
+                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? "\"$urlpath/login/login_page.php\"" : "\"$urlpath/login/logout_page.php\"" ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
                 </ul>
             </div>
         </div>
