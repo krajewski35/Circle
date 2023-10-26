@@ -68,6 +68,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -90,4 +92,5 @@ li a:hover {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  padding: 1rem;
 }

@@ -21,7 +21,7 @@
     <body>
         <div id = "header">
             <span id = "site-name">
-                <img src=<?php echo "\"$urlpath/images/CircleLogoWeb.png\"" ?> height="105" length="170" class="site-name">
+                <img src=<?php echo "\"$homepath/images/CircleLogoWeb.png\"" ?> height="135" length="200" class="site-name">
             </span>
             
             <div id="navigation">
