@@ -2,21 +2,21 @@
 //Start session
 session_start();
 
-//Redirect to login page if accessed directly
-if (empty($_SESSION['email'])) {
-    header("Location: ../../login/login_page.php");
-    exit();
-}
-//Redirect to homepage if user is not admin
-elseif ($_SESSION['memberpurpose'] != 'admin') {
-    header("Location: ../../index.php");
-    exit();
-}
-
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
 $dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
+
+//Redirect to login page if accessed directly
+if (empty($_SESSION['email'])) {
+    header("Location: $urlpath/login/login_page.php");
+    exit();
+}
+//Redirect to homepage if user is not admin
+elseif ($_SESSION['memberpurpose'] != 'admin') {
+    header("Location: $urlpath/index.php");
+    exit();
+}
 
 //Make sure request to delete is directly from user list
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -51,7 +51,7 @@ else {
     include("$homepath/includes/header.php");
 
     echo "<h3>You ended up on this page by mistake</h3>";
-    echo "<button type=\"button\" onclick=\"location.href='../../index.php'\">Back to home</button>";
+    echo "<button type=\"button\" onclick=\"location.href='$urlpath/index.php'\">Back to home</button>";
 }
 
 //Include footer

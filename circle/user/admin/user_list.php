@@ -2,21 +2,21 @@
 //Start session
 session_start();
 
-//Redirect to login page if accessed directly
-if (empty($_SESSION['email'])) {
-    header("Location: ../../login/login_page.php");
-    exit();
-}
-//Redirect to homepage if user is not admin
-elseif ($_SESSION['memberpurpose'] != 'admin') {
-    header("Location: ../../index.php");
-    exit();
-}
-
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
 $dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
+
+//Redirect to login page if accessed directly
+if (empty($_SESSION['email'])) {
+    header("Location: $urlpath/login/login_page.php");
+    exit();
+}
+//Redirect to homepage if user is not admin
+elseif ($_SESSION['memberpurpose'] != 'admin') {
+    header("Location: $urlpath/index.php");
+    exit();
+}
 
 //Include header
 $pagetitle = 'User List';

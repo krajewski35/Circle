@@ -2,15 +2,15 @@
 //Start session
 session_start();
 
-//Redirect to login page if accessed directly
-if (empty($_SESSION['email'])) {
-    header("Location: ../login/login_page.php");
-    exit();
-}
-
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
+
+//Redirect to login page if accessed directly
+if (empty($_SESSION['email'])) {
+    header("Location: $urlpath/login/login_page.php");
+    exit();
+}
 
 //Include header
 $pagetitle = 'User Settings';
@@ -23,7 +23,7 @@ echo "<p class=\"userdetails\">" .
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
     <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
     <b>User status: </b>" . ucfirst($_SESSION['memberpurpose']) . "</p>";
-echo "<button type=\"button\" onclick=\"location.href='../login/logout_page.php'\">Log out</button>";
+echo "<button type=\"button\" onclick=\"location.href='$urlpath/login/logout_page.php'\">Log out</button>";
 ?>
 
 <!-- Information change form -->

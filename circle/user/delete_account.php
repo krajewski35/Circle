@@ -2,16 +2,16 @@
 //Start session
 session_start();
 
-//Redirect to login page if accessed directly
-if (empty($_SESSION['email'])) {
-    header("Location: ../login/login_page.php");
-    exit();
-}
-
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
 $dbpath = '/home/infost490f2305/mysqli_connect/mysqli_connect.php';
+
+//Redirect to login page if accessed directly
+if (empty($_SESSION['email'])) {
+    header("Location: $urlpath/login/login_page.php");
+    exit();
+}
 
 //Make sure request to delete is directly from user settings and is not admin
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin') {
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['memberpurpose'] != 'admin
 
         //Deletion prompt
         echo "<h3>You have successfully deleted your account!</h3>";
-        echo "<button type=\"button\" onclick=\"location.href='../index.php'\">Back to home</button>";
+        echo "<button type=\"button\" onclick=\"location.href='$urlpath/index.php'\">Back to home</button>";
     }
     else {
         $errors[] = 'Issue with deletion system. Please contact the Circle team for support.';

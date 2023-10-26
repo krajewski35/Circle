@@ -2,15 +2,15 @@
 //Start session
 session_start();
 
-//Redirect to user settings if already logged in
-if (!empty($_SESSION['email'])) {
-    header("Location: ../user/user_settings.php");
-    exit();
-}
-
 //Define homepaths
 $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle';
 $urlpath = $_SERVER['HTTP_POST'] . '/circle';
+
+//Redirect to user settings if already logged in
+if (!empty($_SESSION['email'])) {
+    header("Location: $urlpath/user/user_settings.php");
+    exit();
+}
 
 //Include header
 $pagetitle = 'Register User';
