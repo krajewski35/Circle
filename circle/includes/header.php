@@ -20,14 +20,14 @@
     </head>
     <body>
         <div id = "header">
-            <span id = "site-name">
-                <img src=<?php echo "\"$homepath/images/CircleLogoWeb.png\"" ?> height="135" length="200" class="site-name">
-            </span>
             
             <div id="navigation">
                 <ul class="navigation">
                     <?php
                     //All user access
+                    //logo
+                    echo "<li><img src=<?php echo '\'$homepath/images/cir_favicon.png\' ?> height='50' length='50' class='site-name'li>"
+
                     echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
                     
                     //Logged out user access
