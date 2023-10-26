@@ -1,6 +1,4 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/infost490f2305/public_html/
- - /bin/cp index.html $DEPLOYPATH
- - /bin/cp index1.html $DEPLOYPATH
- - /bin/cp -R pages $DEPLOYPATH
+ - /bin/cp -R circle $DEPLOYPATH
