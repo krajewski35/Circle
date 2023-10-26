@@ -4,6 +4,7 @@
         <!-- Define homepath with PHP -->
         <?php $homepath = $_SERVER['DOCUMENT_ROOT'] . '/circle' ?>
         <?php $urlpath = $_SERVER['HTTP_POST'] . '/circle' ?>
+        <?php $homepath = $_SERVER['HTTP_POST'] . '/circle' ?> <!-- DEBUGGING -->
 
         <!-- Basic Header -->
         <meta charset="utf-8">
