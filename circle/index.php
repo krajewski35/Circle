@@ -10,7 +10,7 @@ include('includes/header.php');
 <header>
 <div class= "content-wrap">
     <h2> testing</h2>
-    <?php echo "Directory: " . __DIR__ ?>
+    <?php phpinfo(); ?>
     <p>testing some more  </p>
     </div>
 </header>
