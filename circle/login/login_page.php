@@ -36,9 +36,6 @@ input {
   vertical-align: bottom;
   top: -10px;
 }
-.login{
-  cursor: pointer;
-}
 </style>    
 <!-- Login form -->
 <form action="handle_login.php" method="post" class="login">
@@ -49,7 +46,7 @@ input {
             <label for="password" class="login">Password</lablel><br>
             <input type="password" name="password" class="login" size="20" minlength="8" maxlength="255" /><br> <!-- Requiring password length of > 8 characters -->
         </p>
-        <p><input type="submit" name="submit" class="login" value="Log in" /></p>
+        <p><input type="submit" name="submit" value="Log in" /></p>
     </fieldset>
 </form>
 
