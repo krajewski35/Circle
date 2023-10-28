@@ -15,7 +15,10 @@ if (!empty($_SESSION['email'])) {
 //Include header
 $pagetitle = 'Register User';
 include("$homepath/includes/header.php");
+include("$homepath/includes/style.css");
 ?>
+
+
 
 <!-- User Registration Form -->
 <form action="handle_register.php" method="post" align="center" class="login">
