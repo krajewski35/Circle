@@ -24,7 +24,7 @@ form {
   margin-left: auto;
   margin-right: auto;
   border-radius: 6px;
-  background: #AAA;
+  background: #e5e5e5;
   box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
