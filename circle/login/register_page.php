@@ -15,10 +15,42 @@ if (!empty($_SESSION['email'])) {
 //Include header
 $pagetitle = 'Register User';
 include("$homepath/includes/header.php");
-include("$homepath/includes/style.css");
 ?>
 
+<style>
+form {
+  width: 50%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  background: #EDF6F9;
+  box-shadow: 0 0 30px 0 #a37547; 
+}
 
+input, select, textarea {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width:15%;
+}
+
+input {
+  width: calc(100% - 10px);
+  padding: 5px;
+  vertical-align: bottom;
+  position: relative;
+  top: -10px;
+}
+
+textarea {
+  width: calc(100% - 12px);
+  padding: 5px;
+}
+</style>
 
 <!-- User Registration Form -->
 <form action="handle_register.php" method="post" align="center" class="login">
