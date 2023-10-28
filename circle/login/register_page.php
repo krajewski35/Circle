@@ -24,8 +24,8 @@ form {
   margin-left: auto;
   margin-right: auto;
   border-radius: 6px;
-  background: #EDF6F9;
-  box-shadow: 0 0 30px 0 #a37547; 
+  background: #AAA;
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
 input, select, textarea {
