@@ -42,7 +42,6 @@ input {
   width: calc(100% - 10px);
   padding: 5px;
   vertical-align: bottom;
-  position: relative;
   top: -10px;
 }
 
