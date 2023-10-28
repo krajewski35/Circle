@@ -51,11 +51,7 @@
       max-width: 800px;
       width: 85%;
       margin: 0 auto;
-      padding: 60px 0;
-    background-image: url(circle/images/CircleLogoWeb.png);
-    background-size: 20% 80%;
-    background-position: center;
-    
+      padding: 60px 0;    
     }
     
     h3 {
