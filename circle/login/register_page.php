@@ -52,7 +52,7 @@ textarea {
 </style>
 
 <!-- User Registration Form -->
-<form action="handle_register.php" method="post" align="center" class="login">
+<form action="handle_register.php" method="post" class="login">
     <fieldset class="login">
         <p>
             <p><b>*Required Field</b></p>
