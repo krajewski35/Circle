@@ -13,9 +13,7 @@ include("$homepath/includes/header.php");
 
 <header>
 <div class= "content-wrap">
-    <h2> testing</h2>
     <img src="images/mke.png" class="mke">
-    <p>testing some more  </p>
     </div>
 </header>
 <ul>
