@@ -35,12 +35,6 @@ input, select, textarea {
 }
 
 select {
-  appearance: none;
-  width: 100%;
-  font-size: 1.15rem;
-  padding: 0.675em 6em 0.675em 1em;
-  border: 1px solid #caced1;
-  border-radius: 0.25rem;
   cursor: pointer;
 }
 
