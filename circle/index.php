@@ -14,7 +14,7 @@ include("$homepath/includes/header.php");
 <header>
 <div class= "content-wrap">
     <img src="images/mke.png" class="mke">
-    </div>
+</div>
 </header>
 <ul>
     <li><a class="active" href="login_page.php">Home</a></li>
