@@ -12,6 +12,9 @@ include("$homepath/includes/header.php");
 ?>
 
 <header>
+<head>
+    <link type="text/css" rel="stylesheet" href="indexstyle.css" />
+</head>
 <div class= "content-wrap">
     <img src="images/mke.png" class="mke">
 </div>
