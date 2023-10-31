@@ -16,27 +16,7 @@ if (!empty($_SESSION['email'])) {
 $pagetitle = 'Log in';
 include("$homepath/includes/header.php");
 ?>
-
-<style>
-form {
-  width: 50%;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 6px;
-  background: #e5e5e5;
-  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
-}
-input {
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: calc(100% - 10px);
-  padding: 5px;
-  vertical-align: bottom;
-  top: -10px;
-}
-</style>    
+  
 <!-- Login form -->
 <form action="handle_login.php" method="post" class="login">
     <fieldset class="login">
