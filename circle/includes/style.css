@@ -41,8 +41,13 @@ a:hover {
 }
 
 .box-text {
-  height: 40vh;
-  margin-top: 40vh;
+  height: 20vh;
+  margin-top: 20vh;
+}
+
+.box-img {
+  height: 20vh;
+  margin-top: 20vh;
 }
 
 
