@@ -55,6 +55,12 @@ a:hover {
   margin-top: 28vh;
 }
 
+.box button {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5%;
+}
+
 
 /* Headings */
 h1, h2 {
