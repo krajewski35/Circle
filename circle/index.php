@@ -18,6 +18,7 @@ include("$homepath/includes/header.php");
 <div class="box">
     <div class="box-text">
         <h2>Circle is where volunteering comes in full circle!</h2>
+        <h2>• People • Causes • Rewards</h2>
         <br>
         <button class="button_reverse">Help in your community</button>
     </div>
@@ -31,7 +32,9 @@ include("$homepath/includes/header.php");
     </div>
     <div class="box-text">
         <h2>Circle is where volunteering comes in full circle!</h2>
+        <h2>• People • Causes • Rewards</h2>
         <br>
+
         <button class="button_reverse">Help in your community</button>
     </div>
 </div>
