@@ -89,7 +89,7 @@ h3 {
 
 
 /* ---- Navigation Menu ---- */
-div.navigation {
+ul.navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -97,10 +97,6 @@ div.navigation {
   background-color: black;
   display: flex;
   justify-content: left;
-}
-
-ul.navigation {
-  
 }
 
 li.navigation {
@@ -140,7 +136,7 @@ li a:hover.navigation {
 form.login {
   display: inline-block;
   padding: 15px, auto, 15px, auto;
-  margin: 10px, auto, 10px, auto;
+  margin: 15px, auto, 10px, auto;
   background: #f1f1f1;
   box-shadow: 4.0px 6.0px 6.0px hsl(0deg 0% 0% / 0.38);
   border: 2px solid #ccc;
