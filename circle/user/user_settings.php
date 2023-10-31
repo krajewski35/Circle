@@ -23,7 +23,7 @@ echo "<p class=\"userdetails\">" .
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
     <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
     <b>User status: </b>" . ucfirst($_SESSION['memberpurpose']) . "</p>";
-echo "<button type=\"button\" onclick=\"location.href='$urlpath/login/logout_page.php'\">Log out</button>";
+echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath/login/logout_page.php'\">Log out</button>";
 ?>
 
 <!-- Information change form -->
@@ -32,27 +32,27 @@ echo "<button type=\"button\" onclick=\"location.href='$urlpath/login/logout_pag
         <p>
             <!-- First name -->
             <label for="firstname" class="change">Change First Name</label><br>
-            <input type="text" name="firstname" class="change" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['firstname']}\"" ?> /><br>
+            <input type="text" name="firstname" class="login" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['firstname']}\"" ?> /><br>
             <!-- Last name -->
             <label for="lastname" class="change">Change Last Name</label><br>
-            <input type="text" name="lastname" class="change" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['lastname']}\"" ?> /><br>
+            <input type="text" name="lastname" class="login" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['lastname']}\"" ?> /><br>
             <!-- Username -->
             <label for="username" class="change">Change Public Username</label><br>
-            <input type="text" name="username" class="change" size="20" maxlength="31" <?php echo "placeholder=\"{$_SESSION['username']}\"" ?> /><br>
+            <input type="text" name="username" class="login" size="20" maxlength="31" <?php echo "placeholder=\"{$_SESSION['username']}\"" ?> /><br>
             <!-- Email Address -->
             <label for="email" class="change">Change Email Address</label><br>
-            <input type="email" name="email" class="change" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['email']}\"" ?> /><br>
+            <input type="email" name="email" class="login" size="20" maxlength="255" <?php echo "placeholder=\"{$_SESSION['email']}\"" ?> /><br>
             <!-- Confirm Email -->
             <label for="email" class="change">Confirm Email Address</label><br>
-            <input type="email" name="emailconfirm" class="change" size="20" maxlength="255" /><br>
+            <input type="email" name="emailconfirm" class="login" size="20" maxlength="255" /><br>
             <!-- Password -->
             <label for="password" class="change">Change Password (Must be greater than 8 characters)</label><br>
-            <input type="password" name="password" class="change" size="20" maxlength="255" /><br>
+            <input type="password" name="password" class="login" size="20" maxlength="255" /><br>
             <!-- Confirm Password -->
             <label for="password" class="change">Confirm Password</label><br>
-            <input type="password" name="passwordconfirm" class="change" size="20" maxlength="255" /><br>
+            <input type="password" name="passwordconfirm" class="login" size="20" maxlength="255" /><br>
             <!-- Member Type -->
-            <label for="membertype" class="change">Change member type</label><br>
+            <label for="membertype" class="login">Change member type</label><br>
             <select name="membertype" id="membertype">
                 <?php 
                 //Add dropdown option for each member type (Order based on current type)
@@ -66,7 +66,7 @@ echo "<button type=\"button\" onclick=\"location.href='$urlpath/login/logout_pag
                 ?>
             </select><br>
             <!-- Member Purpose -->
-            <label for="memberpurpose" class="change">Change member intention</label><br>
+            <label for="memberpurpose" class="login">Change member intention</label><br>
             <select name="memberpurpose" id="memberpurpose">
                 <?php 
                 //Add dropdown option for each member purpose
@@ -90,14 +90,14 @@ echo "<button type=\"button\" onclick=\"location.href='$urlpath/login/logout_pag
                 ?>
             </select><br>
         </p>
-        <p><input type="submit" name="submit" value="Change info" /></p>
+        <p><input type="submit" name="submit" class="button" value="Change info" /></p>
     </fieldset>
 </form>
 
 <!-- Account deletion button -->
 <h3>Delete account (Warning: This action is irreversible)</h3>
 <form action="delete_account.php" method="post" align="center" class="urgent">
-    <input type="submit" name="submit" value="Delete account" />
+    <input type="submit" name="submit" class="warnbutton" value="Delete account" />
 </form>
 
 <?php

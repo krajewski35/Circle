@@ -137,6 +137,7 @@ input.login {
 }
 
 label.login {
+  text-align: left;
   margin-bottom: 10px;
 }
 
@@ -168,10 +169,8 @@ textarea {
   line-height: normal;
   outline: none;
   text-align: center;
-  /*text-decoration: none;*/
   transition: all 200ms ease-out;
   user-select: none;
-  /*-webkit-user-select: none;*/
   touch-action: manipulation;
   width: 50%;
   min-width: 50px;
@@ -180,6 +179,29 @@ textarea {
 
 .button:hover {
   background-color: #757575;
+}
+
+.warnbutton {
+  background-color: #d60000;
+  border: 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  outline: none;
+  text-align: center;
+  transition: all 200ms ease-out;
+  user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+  min-width: 50px;
+  min-height: 40px;
+}
+
+.warnbutton:hover {
+  background-color: #ff1111;
 }
 
 
