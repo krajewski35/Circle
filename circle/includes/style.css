@@ -102,9 +102,8 @@ li.navigation {
   float: left;
 }
 
-img.navigation {
-  float:left;
-  padding:10px, 20px, 5px, 50px;
+li img.navigation {
+  padding: 10px, 20px, 5px, 50px;
 }
 
 li a.navigation {
@@ -114,7 +113,7 @@ li a.navigation {
   padding: 32px 16px;
   text-decoration: none;
   transition: all 200ms ease-out;
-  font-size: 20px;
+  font-size: 18px;
   font-weight:bold;
 }
 
@@ -148,7 +147,6 @@ fieldset.login {
 }
 
 input.login {
-  float:left;
   margin-bottom: 15px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -161,7 +159,6 @@ input.login {
 }
 
 label.login {
-  float:left;
   margin-bottom: 10px;
 }
 
