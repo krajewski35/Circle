@@ -77,7 +77,7 @@ ul.navigation {
 
 li.navigation {
   float: left;
-  transition: all 200ms ease-out;
+  
 }
 
 li a.navigation {
@@ -86,6 +86,7 @@ li a.navigation {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: all 200ms ease-out;
 }
 
 li a:hover.navigation {
@@ -182,5 +183,5 @@ textarea {
 
 /* ---- Footer ---- */
 #footer {
-  margin-top: 20px;
+  margin-top: 50px;
 }
