@@ -182,7 +182,7 @@ textarea {
 }
 
 .warnbutton {
-  background-color: #d60000;
+  background-color: #a00000;
   border: 0;
   border-radius: 15px;
   box-sizing: border-box;
@@ -201,7 +201,7 @@ textarea {
 }
 
 .warnbutton:hover {
-  background-color: #ff1111;
+  background-color: #fd2525;
 }
 
 

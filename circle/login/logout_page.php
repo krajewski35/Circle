@@ -27,7 +27,7 @@ include("$homepath/includes/header.php");
 
 //Log out prompt
 echo "<h3>You have successfully logged out!</h3>";
-echo "<button type=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
+echo "<button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
 
 //Include footer
 include("$homepath/includes/footer.php");

@@ -27,8 +27,8 @@ echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath
 ?>
 
 <!-- Information change form -->
-<form action="handle_change.php" method="post" align="center" class="change">
-    <fieldset class="change">
+<form action="handle_change.php" method="post" align="center" class="login">
+    <fieldset class="login">
         <p>
             <!-- First name -->
             <label for="firstname" class="change">Change First Name</label><br>
