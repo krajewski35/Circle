@@ -17,14 +17,14 @@ include("$homepath/includes/header.php");
 </div>
 <div class="box">
     <div class="box-text">
-        <h3>Circle is where volunteering comes in full circle!</h3>
+        <h2>Circle is where volunteering comes in full circle!</h2>
         <br>
         <button>
             <h3>Become a part of your Community</h3>
         </button>
     </div>
     <div class="box-img">
-        <img src="images/volunteer.png" >
+        <img src="images/1.png" >
     </div>
 </div>
 
