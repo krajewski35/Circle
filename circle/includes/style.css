@@ -96,11 +96,15 @@ ul.navigation {
   background-color: black;
   display: flex;
   justify-content: left;
-  padding: 10px 20px;
+  padding: 10px 20px 5px 20px;
 }
 
 li.navigation {
   float: left;
+}
+
+li img.navigation {
+  margin-right: 50px;
 }
 
 li a.navigation {
@@ -109,6 +113,7 @@ li a.navigation {
   text-align: center;
   text-decoration: none;
   transition: all 200ms ease-out;
+  padding: 10px 20px;
   font-size: 18px;
   font-weight:bold;
 }
