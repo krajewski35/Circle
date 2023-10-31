@@ -29,6 +29,8 @@ include("$homepath/includes/header.php");
         <h3>It's where sponsors can reward volunteers for their time.</h3>
         <p>Volunteers receive points they can later exchange for rewards on Circle. Businesses large and small 
             can provide them to connect with volunteers and promote their brand.</p>
+    <div class="box-text">
+        <h3>Circle is where volunteering comes in full circle</h3>
     </div>
     <div>
         <p>img here</p>

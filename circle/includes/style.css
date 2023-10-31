@@ -40,6 +40,11 @@ a:hover {
   color: white;
 }
 
+.box-text {
+  height: 40vh;
+  margin-top: 40vh;
+}
+
 
 /* Headings */
 h1, h2 {
