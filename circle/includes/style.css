@@ -116,6 +116,7 @@ form.login {
   box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
   border: 1px solid #ccc;
   border-radius: 6px;
+  width: 50%;
 }
 
 input.login {
