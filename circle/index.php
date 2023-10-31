@@ -33,7 +33,7 @@ include("$homepath/includes/header.php");
         <h3>Circle is where volunteering comes in full circle</h3>
     </div>
     <div>
-        <p>img here</p>
+        <img src="images/volunteer.png" >
     </div>
 </div>
 
