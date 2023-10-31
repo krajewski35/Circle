@@ -110,6 +110,7 @@ li a:hover.navigation {
 
 /* ---- Forms ---- */
 form.login {
+  text-align: left;
   display: inline-block;
   padding: 10px, auto, 15px, auto;
   margin: 10px, auto, 10px, auto;
@@ -121,7 +122,6 @@ form.login {
 }
 
 fieldset.login {
-  text-align: left;
   border: 0;
 }
 
