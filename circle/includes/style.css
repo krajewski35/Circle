@@ -165,7 +165,7 @@ textarea {
   outline: none;
   text-align: center;
   /*text-decoration: none;*/
-  transition: all 300ms ease-in-out;
+  transition: all 100ms ease-out;
   user-select: none;
   /*-webkit-user-select: none;*/
   touch-action: manipulation;
