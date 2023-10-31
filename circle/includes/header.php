@@ -22,8 +22,11 @@
         <!-- Add header image before navigation bar -->
         <?php //echo "<a href=\"$urlpath/index.php\"><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></a>"; ?>
         <div id="navigation">
-        //Navigation bar logo
-            <?php echo "<img src=\"$urlpath/images/CircleLogoNav.png\" height=\"80\" length=\"80\" id=\"navlogo\">"; ?>
+            <?php
+            //Navigation Bar Logo
+            echo "<img src=\"$urlpath/images/CircleLogoNav.png\" height=\"80\" length=\"80\" id=\"navlogo\">";
+            ?>
+            
             <ul class="navigation">
                 <?php
 

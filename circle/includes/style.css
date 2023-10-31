@@ -89,7 +89,7 @@ h3 {
 
 
 /* ---- Navigation Menu ---- */
-ul.navigation {
+div.navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -97,6 +97,10 @@ ul.navigation {
   background-color: black;
   display: flex;
   justify-content: left;
+}
+
+ul.navigation {
+  
 }
 
 li.navigation {
@@ -135,7 +139,7 @@ li a:hover.navigation {
 /* ---- Forms ---- */
 form.login {
   display: inline-block;
-  padding: 10px, auto, 15px, auto;
+  padding: 15px, auto, 15px, auto;
   margin: 10px, auto, 10px, auto;
   background: #f1f1f1;
   box-shadow: 4.0px 6.0px 6.0px hsl(0deg 0% 0% / 0.38);
@@ -193,9 +197,10 @@ button, input[type="submit"] {
   transition: all 200ms ease-out;
   user-select: none;
   touch-action: manipulation;
-  width: 25%;
-  min-width: 50px;
+  width: 200px;
   min-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .button {
@@ -218,21 +223,7 @@ button, input[type="submit"] {
 
 .button_warn {
   background-color: #a00000;
-  border: 0;
-  border-radius: 15px;
-  box-sizing: border-box;
   color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  line-height: normal;
-  outline: none;
-  text-align: center;
-  transition: all 200ms ease-out;
-  user-select: none;
-  touch-action: manipulation;
-  width: 50%;
-  min-width: 50px;
-  min-height: 40px;
 }
 
 .button_warn:hover {
