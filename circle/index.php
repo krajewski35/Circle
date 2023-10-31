@@ -30,7 +30,9 @@ include("$homepath/includes/header.php");
         <p>Volunteers receive points they can later exchange for rewards on Circle. Businesses large and small 
             can provide them to connect with volunteers and promote their brand.</p> -->
     <div class="box-text">
-        <h3>Circle is where volunteering comes in full circle</h3>
+        <h3>Circle is where volunteering comes in full circle!</h3>
+        <br>
+        <h3>Become a part of your Community</h3>
     </div>
     <div class="box-img">
         <img src="images/volunteer.png" >
