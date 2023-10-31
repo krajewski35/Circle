@@ -19,7 +19,7 @@ include("$homepath/includes/header.php");
     <div class="box-text">
         <h3>Circle is where volunteering comes in full circle</h3>
     </div>
-    <div>
+    <div class="box-img">
         <img src="images/volunteer.png" >
     </div>
 </div>
