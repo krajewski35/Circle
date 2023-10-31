@@ -28,7 +28,7 @@ include("$homepath/includes/header.php");
 </div>
 <div class="box">
     <div class="box-img">
-        <img src="images/1.png" >
+        <img src="images/rewards.png" >
     </div>
     <div class="box-text">
         <h2>Circle is where volunteering comes in full circle!</h2>
