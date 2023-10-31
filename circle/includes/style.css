@@ -38,16 +38,17 @@ a:hover {
   border: 1px solid black;
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 .box-text {
-  height: 20vh;
-  margin-top: 20vh;
+  height: 40vh;
+  margin-top: 35vh;
 }
 
 .box-img {
-  height: 20vh;
-  margin-top: 20vh;
+  height: 45vh;
+  margin-top: 10vh;
 }
 
 
