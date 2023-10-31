@@ -33,7 +33,7 @@ h1, h2 {
   line-height: 1;
   font-family:'Caveat', cursive;
   font-weight: 400;
-  margin: 0;
+  margin: 10px, 0px, 10px, 0px;
   text-align: center;
 }
 
@@ -87,9 +87,11 @@ li a:hover {
   padding: 1rem;
 }
 
-/* ---- Site Logo ---- */
+/* ---- Site Logo Image ---- */
 #sitelogo {
-  margin-bottom: 20px;
+  display: block;
+  margin: 15px, auto, 15px, auto;
+  width: 50%;
 }
 
 
