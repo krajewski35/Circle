@@ -35,7 +35,7 @@ include("$homepath/includes/header.php");
         <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;">• Restaurants • Local businesses • Entertainment</h2>
         <br>
 
-        <button class="button_reverse">Help in your community</button>
+       <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/login_page.php"> <button class="button_reverse">Help in your community</button></a>
     </div>
 </div>
 
