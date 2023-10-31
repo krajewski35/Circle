@@ -111,15 +111,11 @@ li a:hover.navigation {
 }
 
 
-/* ---- Site & Navigation Logo Images ---- */
-#sitelogo {
-  margin: 0, auto, 0, auto;
-  padding: 15px;
-}
-
+/* ---- Navigation Logo Images ---- */
 #navlogo {
   padding-top:10px;
   padding-bottom:5px;
+  float:left;
 }
 
 
