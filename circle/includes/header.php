@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title><?php echo "$pagetitle" ?> - Circle</title>
-        <link type="text/css" rel="stylesheet" href="style.css" />
+        <link type="text/css" rel="stylesheet" href=<?php echo "\"$urlpath/includes/style.css\"" ?> />
         <link rel="icon" type="image/x-icon" href=<?php echo "\"$urlpath/includes/favicon.ico\"" ?> >
 
         <!-- CSS Design -->
