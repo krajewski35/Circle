@@ -26,7 +26,7 @@
                 <?php
                 
                 //Navigation bar logo
-                echo "<li><img src=\"$urlpath/images/CircleLogoNav.png\" height=\"100\" length=\"100\" id=\"navlogo\"></li>";
+                echo "<li><img src=\"$urlpath/images/CircleLogoNav.png\" height=\"80\" length=\"80\" id=\"navlogo\"></li>";
 
                 //Navigation menu
                 //All user access
