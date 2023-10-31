@@ -102,7 +102,7 @@ li.navigation {
   float: left;
 }
 
-li img.navigation {
+img.navigation {
   padding:10px, 20px, 5px, 50px;
 }
 
@@ -113,7 +113,8 @@ li a.navigation {
   padding: 32px 16px;
   text-decoration: none;
   transition: all 200ms ease-out;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight:bold;
 }
 
 li a:hover.navigation {
@@ -146,6 +147,7 @@ fieldset.login {
 }
 
 input.login {
+  float:left;
   margin-bottom: 15px;
   padding: 5px;
   border: 1px solid #ccc;
