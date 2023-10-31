@@ -21,7 +21,7 @@ include("$homepath/includes/header.php");
         
     </div>
     <div>
-        <p>img here</p>
+        <img src="images/volunteer.png" >
     </div>
 </div>
 
