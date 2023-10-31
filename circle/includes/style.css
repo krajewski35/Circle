@@ -100,14 +100,16 @@ li a:hover.navigation {
 
 /* ---- Forms ---- */
 form.login {
+  display: flex;
+  justify-content: center;
   width: 50%;
   padding: 20px;
-  margin: 10px, auto, 10px, auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: #e5e5e5;
   box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
   border: 1px solid #ccc;
   border-radius: 6px;
-  justify-content: center;
 }
 
 input.login {
