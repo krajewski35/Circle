@@ -74,7 +74,7 @@ include("$homepath/includes/header.php");
             </select><br>
         </p>
         <!-- Register -->
-        <p><input type="submit" name="submit"  class="register" value="Register" /></p>
+        <p><input type="submit" name="submit" class="button" value="Register" /></p>
     </fieldset>
 </form>
 

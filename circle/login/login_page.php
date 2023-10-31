@@ -26,7 +26,7 @@ include("$homepath/includes/header.php");
             <label for="password" class="login">Password</lablel><br>
             <input type="password" name="password" class="login" size="20" minlength="8" maxlength="255" /><br> <!-- Requiring password length of > 8 characters -->
         </p>
-        <p><input type="submit" name="submit" value="Log in" /></p>
+        <p><input type="submit" name="submit" class="button" value="Log in" /></p>
     </fieldset>
 </form>
 
