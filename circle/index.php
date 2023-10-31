@@ -15,12 +15,13 @@ include("$homepath/includes/header.php");
 <div class= "content-wrap">
     <img src="images/mke.png" class="mke">
     <h2>Where volunteering comes in full circle!</h2>
+    <a href=<?php echo "$homepath/login/register_page.php"; ?> ><button class="button">Join Circle</button></a>
 </div>
 <div class="box">
     <div class="box-text">
         <h2>Circle is a one-stop app for everyone!</h2>
         <h2>• People • Causes • Sponsors •</h2>
-        <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/register_page.php" ><button class="button_reverse">Help in your community</button> </a>
+        <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/register_page.php"><button class="button_reverse">Help in your community</button></a>
     </div>
     <div class="box-img">
         <img src="images/1.png" >
