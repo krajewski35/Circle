@@ -31,8 +31,8 @@ include("$homepath/includes/header.php");
         <img src="images/rewards.png" >
     </div>
     <div class="box-text">
-        <h3 style= "font-family: Trebuchet MS, Helvetica, sans-serif";>Redeem your volunteer rewards now. You earned it!</h3>
-        <br><h3 style= "font-family: Trebuchet MS, Helvetica, sans-serif">• Restaurants • Local businesses • Entertainment</h3>
+        <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 20px;">Redeem your volunteer rewards now. You earned it!</h2>
+        <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 20px;">• Restaurants • Local businesses • Entertainment</h2>
         <br>
 
         <button class="button_reverse">Help in your community</button>
