@@ -28,6 +28,10 @@ a:hover{
   text-decoration: none;
 }
 
+.mke {
+  width: 100%;
+}
+
 
 /* Headings */
 
@@ -90,6 +94,7 @@ li a:hover.navigation {
   padding: 1rem;
 }
 
+
 /* ---- Site & Navigation Logo Images ---- */
 #sitelogo {
   display: flex;
@@ -99,24 +104,25 @@ li a:hover.navigation {
 }
 
 #navlogo {
-  margin-top: 2px;
-  margin-bottom: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 
 
 /* ---- Forms ---- */
 form.login {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin: 10px, auto, 10px, auto;
   background: #e5e5e5;
-  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
-  border: 1px solid #ccc;
+  box-shadow: 4.0px 6.0px 6.0px hsl(0deg 0% 0% / 0.38);
+  border: 2px solid #ccc;
   border-radius: 6px;
   width: 50%;
+}
+
+fieldset.login {
+  border: 0;
 }
 
 input.login {

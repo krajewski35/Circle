@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- Add header image before navigation bar -->
-        <?php echo "<li><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></li>"; ?>
+        <?php echo "<li><a href=\"$urlpath/index.php\"><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></a></li>"; ?>
         <div id="navigation">
             <ul class="navigation">
                 <?php
