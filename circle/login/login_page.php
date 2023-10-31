@@ -20,12 +20,12 @@ include("$homepath/includes/header.php");
 <!-- Login form -->
 <form action="handle_login.php" method="post" class="login">
     <fieldset class="login">
-        <p>
+        <div class="login">
             <label for="email" class="login">Email Address</label><br>
             <input type="email" name="email" class="login" size="20" maxlength="255" /><br>
             <label for="password" class="login">Password</lablel><br>
             <input type="password" name="password" class="login" size="20" minlength="8" maxlength="255" /><br> <!-- Requiring password length of > 8 characters -->
-        </p>
+        </div>
         <p><input type="submit" name="submit" class="button" value="Log in" /></p>
     </fieldset>
 </form>
