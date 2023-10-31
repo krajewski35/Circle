@@ -121,6 +121,7 @@ form.login {
 }
 
 fieldset.login {
+  text-align: left;
   border: 0;
 }
 
@@ -137,7 +138,6 @@ input.login {
 }
 
 label.login {
-  text-align: left;
   margin-bottom: 10px;
 }
 
