@@ -90,10 +90,17 @@ li a:hover.navigation {
   padding: 1rem;
 }
 
-/* ---- Site Logo Image ---- */
+/* ---- Site & Navigation Logo Images ---- */
 #sitelogo {
-  margin: 15px, auto, 15px, auto;
+  display: flex;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#navlogo {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 
@@ -102,7 +109,6 @@ li a:hover.navigation {
 form.login {
   display: flex;
   justify-content: center;
-  width: 50%;
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;

@@ -26,7 +26,7 @@
                 <?php
                 
                 //logo
-                echo "<li><img src=\"$urlpath/images/cir_favicon.png\" height=\"80\" length=\"80\" class=\"site-name\"></li>";
+                echo "<li><img src=\"$urlpath/images/CircleLogoOnly.png\" height=\"50\" length=\"50\" id=\"navlogo\"></li>";
 
                 //Navigation menu
                 //All user access
