@@ -51,7 +51,7 @@ a:hover {
 
 .box-img img{
   height: 75vh;
-  margin-top: 28vh;
+  margin-top: 10vh;
 }
 
 .box button {
@@ -63,16 +63,16 @@ a:hover {
 
 /* Headings */
 h1, h2 {
-  font-size: 45px;
+  font-size: 20px;
   line-height: 1;
   font-family:'Caveat', cursive;
-  font-weight: 'normal';
+  
   margin: 10px, 0px, 10px, 0px;
   text-align: center;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 20px;
 }
 
 h3 {
