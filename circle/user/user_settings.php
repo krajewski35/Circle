@@ -97,7 +97,7 @@ echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath
 <!-- Account deletion button -->
 <h3>Delete account (Warning: This action is irreversible)</h3>
 <form action="delete_account.php" method="post" align="center" class="urgent">
-    <input type="submit" name="submit" class="warnbutton" value="Delete account" />
+    <input type="submit" name="submit" class="button_warn" value="Delete account" />
 </form>
 
 <?php

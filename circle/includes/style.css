@@ -13,7 +13,6 @@ body {
   font-family:'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  /*TEST*/
   text-align: center;
 }
 
@@ -97,21 +96,27 @@ ul.navigation {
   background-color: black;
   display: flex;
   justify-content: left;
+  padding: 10px 20px 5px 20px;
 }
 
 li.navigation {
   float: left;
-  
+}
+
+li img.navigation {
+  margin-right: 40px;
 }
 
 li a.navigation {
   display: block;
   color: white;
   text-align: center;
-  padding: 32px 16px;
   text-decoration: none;
   transition: all 200ms ease-out;
-  font-size: 16px;
+  margin: 19px 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight:bold;
 }
 
 li a:hover.navigation {
@@ -126,17 +131,11 @@ li a:hover.navigation {
 }
 
 
-/* ---- Navigation Logo Images ---- */
-#navlogo {
-  padding:10px, 20px, 5px, 50px;
-}
-
-
 /* ---- Forms ---- */
 form.login {
   display: inline-block;
-  padding: 10px, auto, 15px, auto;
-  margin: 10px, auto, 10px, auto;
+  padding: 15px, auto, 15px, auto;
+  margin: 15px, auto, 10px, auto;
   background: #f1f1f1;
   box-shadow: 4.0px 6.0px 6.0px hsl(0deg 0% 0% / 0.38);
   border: 2px solid #ccc;
@@ -146,10 +145,11 @@ form.login {
 
 fieldset.login {
   border: 0;
+  padding: 15px;
 }
 
 input.login {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -181,12 +181,10 @@ textarea {
 
 
 /* ---- All buttons (Including submit input) ---- */
-.button {
-  background-color: #000000;
+button, input[type="submit"] {
   border: 0;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   line-height: normal;
@@ -195,35 +193,36 @@ textarea {
   transition: all 200ms ease-out;
   user-select: none;
   touch-action: manipulation;
-  width: 50%;
-  min-width: 50px;
+  padding: 15px 40px;
   min-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .button:hover {
   background-color: #757575;
 }
 
-.warnbutton {
-  background-color: #a00000;
-  border: 0;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  line-height: normal;
-  outline: none;
-  text-align: center;
-  transition: all 200ms ease-out;
-  user-select: none;
-  touch-action: manipulation;
-  width: 50%;
-  min-width: 50px;
-  min-height: 40px;
+.button_reverse {
+  background-color: #fcfcfc;
+  color: #000000;
 }
 
-.warnbutton:hover {
+.button_reverse:hover {
+  background-color: #aaaaaa;
+}
+
+.button_warn {
+  background-color: #a00000;
+  color: #FFFFFF;
+}
+
+.button_warn:hover {
   background-color: #fd2525;
 }
 

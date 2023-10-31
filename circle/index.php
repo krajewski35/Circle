@@ -19,12 +19,20 @@ include("$homepath/includes/header.php");
     <div class="box-text">
         <h2>Circle is where volunteering comes in full circle!</h2>
         <br>
-        <button>
-            <h3>Become a part of your Community</h3>
-        </button>
+        <button class="button_reverse">Help in your community</button>
     </div>
     <div class="box-img">
         <img src="images/1.png" >
+    </div>
+</div>
+<div class="box">
+    <div class="box-img">
+        <img src="images/1.png" >
+    </div>
+    <div class="box-text">
+        <h2>Circle is where volunteering comes in full circle!</h2>
+        <br>
+        <button class="button_reverse">Help in your community</button>
     </div>
 </div>
 
