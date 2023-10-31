@@ -15,6 +15,8 @@ body{
   font-family:'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  /*TEST*/
+  text-align: center;
 }
 
 a{
@@ -112,6 +114,7 @@ li a:hover.navigation {
 
 /* ---- Forms ---- */
 form.login {
+  display: inline-block;
   padding: 15px;
   margin: 10px, auto, 10px, auto;
   background: #e5e5e5;
