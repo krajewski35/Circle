@@ -38,16 +38,27 @@ a:hover {
   border: 1px solid black;
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 .box-text {
-  height: 20vh;
-  margin-top: 20vh;
+  height: 40vh;
+  margin-top: 38vh;
 }
 
 .box-img {
-  height: 20vh;
-  margin-top: 20vh;
+  height: 45vh;
+}
+
+.box-img img{
+  height: 45vh;
+  margin-top: 28vh;
+}
+
+.box button {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5%;
 }
 
 
@@ -79,14 +90,13 @@ h3 {
 
 /* ---- Navigation Menu ---- */
 ul.navigation {
-  text-align:left;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 li.navigation {
@@ -116,15 +126,9 @@ li a:hover.navigation {
 }
 
 
-/* ---- Site & Navigation Logo Images ---- */
-#sitelogo {
-  margin: 0, auto, 0, auto;
-  padding: 15px;
-}
-
+/* ---- Navigation Logo Images ---- */
 #navlogo {
-  padding-top:10px;
-  padding-bottom:5px;
+  padding:10px, 20px, 5px, 50px;
 }
 
 
