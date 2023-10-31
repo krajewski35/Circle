@@ -63,7 +63,7 @@ a:hover {
 
 /* Headings */
 h1, h2 {
-  font-size: 35px;
+  font-size: 20px;
   line-height: 1;
   font-family:'Caveat', cursive;
   
@@ -72,7 +72,7 @@ h1, h2 {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 20px;
 }
 
 h3 {

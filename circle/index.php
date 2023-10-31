@@ -17,8 +17,8 @@ include("$homepath/includes/header.php");
 </div>
 <div class="box">
     <div class="box-text">
-        <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif"; >Circle is where volunteering comes in full circle!</h2>
-        <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif">• People • Causes • Rewards</h2>
+        <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;" >Circle is where volunteering comes in full circle!</h2>
+        <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;">• People • Causes • Rewards</h2>
         <br>
         <button class="button_reverse">Help in your community</button>
     </div>
@@ -31,8 +31,8 @@ include("$homepath/includes/header.php");
         <img src="images/rewards.png" >
     </div>
     <div class="box-text">
-        <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 20px;">Redeem your volunteer rewards now. You earned it!</h2>
-        <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 20px;">• Restaurants • Local businesses • Entertainment</h2>
+        <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;">Redeem your volunteer rewards now. You earned it!</h2>
+        <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;">• Restaurants • Local businesses • Entertainment</h2>
         <br>
 
         <button class="button_reverse">Help in your community</button>
