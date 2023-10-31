@@ -104,7 +104,7 @@ li.navigation {
 }
 
 li img.navigation {
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 li a.navigation {
@@ -113,7 +113,8 @@ li a.navigation {
   text-align: center;
   text-decoration: none;
   transition: all 200ms ease-out;
-  margin: 30px 20px;
+  margin: 19px 10px;
+  padding: 10px 20px;
   font-size: 18px;
   font-weight:bold;
 }
