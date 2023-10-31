@@ -54,4 +54,9 @@
             </ul>
         </div>
         <div id = "content">
-            <?php echo "<h1>$pagetitle</h1>" ?>
+            <?php
+            //Print page title on top of screen excluding homepage
+            if ($pagetitle != 'Homepage') {
+                echo "<h1>$pagetitle</h1>";
+            }
+            ?>

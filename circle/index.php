@@ -8,7 +8,7 @@ $urlpath = $_SERVER['HTTP_POST'] . '/circle';
 
 //Display header
 //$pagetitle = 'Circle Volunteering';
-$pagetitle = '';
+$pagetitle = 'Homepage';
 include("$homepath/includes/header.php");
 ?>
 

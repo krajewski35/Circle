@@ -63,12 +63,14 @@ a:hover {
 
 /* Headings */
 h1, h2 {
-  font-size: 20px;
   line-height: 1;
   font-family:'Caveat', cursive;
-  
   margin: 10px, 0px, 10px, 0px;
   text-align: center;
+}
+
+h1 {
+  font-size: 44px;
 }
 
 h2 {
