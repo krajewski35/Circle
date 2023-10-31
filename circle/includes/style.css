@@ -28,6 +28,9 @@ a:hover{
   text-decoration: none;
 }
 
+
+/* Headings */
+
 h1, h2 {
   font-size: 45px;
   line-height: 1;
@@ -41,15 +44,15 @@ h2 {
   font-size: 45px;
 }
 
+h3 {
+  margin-bottom: 0;
+}
+
 .content-wrap {
   max-width: 800px;
   width: 85%;
   margin: 0 auto;
   padding: 60px 0;    
-}
-
-h3 {
-  margin-bottom: 0;
 }
 
 /* Navigation Menu */
@@ -76,7 +79,7 @@ li a.navigation {
   text-decoration: none;
 }
 
-li a:hover {
+li a:hover.navigation {
   background-color: #301934; 
 }
 
@@ -89,10 +92,8 @@ li a:hover {
 
 /* ---- Site Logo Image ---- */
 #sitelogo {
-  display: block;
   margin: 15px, auto, 15px, auto;
-  width: 50%;
-  height: 50%
+  text-align: center;
 }
 
 
@@ -106,6 +107,7 @@ form.login {
   box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
   border: 1px solid #ccc;
   border-radius: 6px;
+  text-align: center;
 }
 
 input.login {
