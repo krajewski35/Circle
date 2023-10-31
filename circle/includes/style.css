@@ -81,7 +81,7 @@ h3 {
 ul.navigation {
   list-style-type: none;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   overflow: hidden;
   background-color: black;
   display: flex;
@@ -117,8 +117,7 @@ li a:hover.navigation {
 
 /* ---- Navigation Logo Images ---- */
 #navlogo {
-  padding-top:10px;
-  padding-bottom:5px;
+  padding:10px, 20px, 5px, 50px;
 }
 
 
