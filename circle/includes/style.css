@@ -181,12 +181,10 @@ textarea {
 
 
 /* ---- All buttons (Including submit input) ---- */
-.button {
-  background-color: #000000;
+button, input[type="submit"] {
   border: 0;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   line-height: normal;
@@ -195,16 +193,30 @@ textarea {
   transition: all 200ms ease-out;
   user-select: none;
   touch-action: manipulation;
-  width: 50%;
+  width: 25%;
   min-width: 50px;
   min-height: 40px;
+}
+
+.button {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .button:hover {
   background-color: #757575;
 }
 
-.warnbutton {
+.button_reverse {
+  background-color: #fcfcfc;
+  color: #000000;
+}
+
+.button_reverse:hover {
+  background-color: #aaaaaa;
+}
+
+.button_warn {
   background-color: #a00000;
   border: 0;
   border-radius: 15px;
@@ -223,7 +235,7 @@ textarea {
   min-height: 40px;
 }
 
-.warnbutton:hover {
+.button_warn:hover {
   background-color: #fd2525;
 }
 
