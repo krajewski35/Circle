@@ -19,42 +19,40 @@
         <link rel= "stylesheet" href=<?php echo "\"$urlpath/includes/style.css\"" ?> >
     </head>
     <body>
-        <div id = "header">
-            <!-- Add header image before navigation bar -->
-            <?php echo "<li><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></li>"; ?>
-            <div id="navigation">
-                <ul class="navigation">
-                    <?php
-                    
-                    //logo
-                    echo "<li><img src=\"$urlpath/images/cir_favicon.png\" height=\"80\" length=\"80\" class=\"site-name\"></li>";
+        <!-- Add header image before navigation bar -->
+        <?php echo "<li><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></li>"; ?>
+        <div id="navigation">
+            <ul class="navigation">
+                <?php
+                
+                //logo
+                echo "<li><img src=\"$urlpath/images/cir_favicon.png\" height=\"80\" length=\"80\" class=\"site-name\"></li>";
 
-                    //Navigation menu
-                    //All user access
-                    echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
-                    
-                    //Logged out user access
-                    if (empty($_SESSION['email'])) {
-                        //Registration page
-                        echo "<li class=\"navigation\"><a href=\"$urlpath/login/register_page.php\" class=\"navigation\">Register User</a></li>";
+                //Navigation menu
+                //All user access
+                echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
+                
+                //Logged out user access
+                if (empty($_SESSION['email'])) {
+                    //Registration page
+                    echo "<li class=\"navigation\"><a href=\"$urlpath/login/register_page.php\" class=\"navigation\">Register User</a></li>";
+                }
+
+                //Logged in user access
+                else {
+                    //Admin only navigation
+                    if ($_SESSION['memberpurpose'] == 'admin') {
+                        //User list
+                        echo "<li class=\"navigation\"><a href=\"$urlpath/user/admin/user_list.php\" class=\"navigation\">User List</a></li>";
                     }
+                    //User settings
+                    echo "<li class=\"navigation\"><a href=\"$urlpath/user/user_settings.php\" class=\"navigation\">User Settings</a></li>";
+                }
+                ?>
 
-                    //Logged in user access
-                    else {
-                        //Admin only navigation
-                        if ($_SESSION['memberpurpose'] == 'admin') {
-                            //User list
-                            echo "<li class=\"navigation\"><a href=\"$urlpath/user/admin/user_list.php\" class=\"navigation\">User List</a></li>";
-                        }
-                        //User settings
-                        echo "<li class=\"navigation\"><a href=\"$urlpath/user/user_settings.php\" class=\"navigation\">User Settings</a></li>";
-                    }
-                    ?>
-
-                    <!-- Log in / Log out page -->
-                    <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? "\"$urlpath/login/login_page.php\"" : "\"$urlpath/login/logout_page.php\"" ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
-                </ul>
-            </div>
+                <!-- Log in / Log out page -->
+                <li class="navigation"><a href=<?php echo (empty($_SESSION['email'])) ? "\"$urlpath/login/login_page.php\"" : "\"$urlpath/login/logout_page.php\"" ?> class="navigation"><?php echo (empty($_SESSION['email'])) ? 'Log in' : 'Log out' ?></a></li>
+            </ul>
         </div>
         <div id = "content">
             <?php echo "<h1>$pagetitle</h1>" ?>
