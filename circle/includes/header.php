@@ -20,13 +20,17 @@
     </head>
     <body>
         <div id = "header">
+            <!-- Add header image before navigation bar -->
+            <?php echo "<li><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></li>"; ?>
             <div id="navigation">
                 <ul class="navigation">
                     <?php
-                    //All user access
+                    
                     //logo
-                    echo "<li><img src=\"$urlpath/images/cir_favicon.png\" height=\"50\" length=\"50\" class=\"site-name\"></li>";
+                    echo "<li><img src=\"$urlpath/images/cir_favicon.png\" height=\"80\" length=\"80\" class=\"site-name\"></li>";
 
+                    //Navigation menu
+                    //All user access
                     echo "<li class=\"navigation\"><a href=\"$urlpath/index.php\" class=\"navigation\">Home</a></li>";
                     
                     //Logged out user access
@@ -53,4 +57,4 @@
             </div>
         </div>
         <div id = "content">
-            <?php echo "<h2>$pagetitle</h2>" ?>
+            <?php echo "<h1>$pagetitle</h1>" ?>
