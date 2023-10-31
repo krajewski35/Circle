@@ -20,7 +20,7 @@ include("$homepath/includes/header.php");
         <h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;" >Circle is where volunteering comes in full circle!</h2>
         <br><h2 style= "font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 30px;">• People • Causes • Rewards</h2>
         <br>
-        <button class="button_reverse">Help in your community</button>
+        <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/register_page.php" ><button class="button_reverse">Help in your community</button> </a>
     </div>
     <div class="box-img">
         <img src="images/1.png" >
