@@ -32,6 +32,13 @@ a:hover {
   width: 100%;
 }
 
+.box {
+  display: flex;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
 
 /* Headings */
 h1, h2 {
