@@ -80,14 +80,13 @@ h3 {
 
 /* ---- Navigation Menu ---- */
 ul.navigation {
-  text-align:left;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 li.navigation {
@@ -117,15 +116,9 @@ li a:hover.navigation {
 }
 
 
-/* ---- Site & Navigation Logo Images ---- */
-#sitelogo {
-  margin: 0, auto, 0, auto;
-  padding: 15px;
-}
-
+/* ---- Navigation Logo Images ---- */
 #navlogo {
-  padding-top:10px;
-  padding-bottom:5px;
+  padding:10px, 20px, 5px, 50px;
 }
 
 
