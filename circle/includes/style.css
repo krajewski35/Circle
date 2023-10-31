@@ -113,7 +113,7 @@ li a.navigation {
   text-align: center;
   text-decoration: none;
   transition: all 200ms ease-out;
-  padding: 50px 20px;
+  margin: 30px 20px;
   font-size: 18px;
   font-weight:bold;
 }
