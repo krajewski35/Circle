@@ -20,13 +20,13 @@
     </head>
     <body>
         <!-- Add header image before navigation bar -->
-        <?php echo "<a href=\"$urlpath/index.php\"><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></a>"; ?>
+        <?php //echo "<a href=\"$urlpath/index.php\"><img src=\"$urlpath/images/CircleLogoWeb.png\" height=\"170\" length=\"105\" id=\"sitelogo\"></a>"; ?>
         <div id="navigation">
             <ul class="navigation">
                 <?php
                 
                 //Navigation bar logo
-                //echo "<li><img src=\"$urlpath/images/CircleLogoOnly.png\" height=\"50\" length=\"50\" id=\"navlogo\"></li>";
+                echo "<li><img src=\"$urlpath/images/CircleLogoNav.png\" height=\"50\" length=\"50\" id=\"navlogo\"></li>";
 
                 //Navigation menu
                 //All user access
