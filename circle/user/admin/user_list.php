@@ -38,7 +38,7 @@ if ($num_rows > 0) {
     echo "<h3>$num_rows registered user(s) found</h3>";
     
     //Print header of table
-    echo '<div id = "usertable"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%">
+    echo '<div class="userlist"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%" class="userlist">
         <tr>
         <th>Username</th>
         <th>First Name</th>
@@ -78,7 +78,7 @@ if ($num_rows > 0) {
 
     //Display list of actions for emails
     //Print header of table
-    echo '<div id = "usertable"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%">
+    echo '<div id="actionlist"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%" class="userlist">
         <tr>
         <th>User</th>
         <th>Make/Remove Admin</th>

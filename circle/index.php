@@ -15,7 +15,7 @@ include("$homepath/includes/header.php");
 <div class= "content-wrap">
     <img src="images/mke.png" class="mke">
     <h2>Where volunteering comes in full circle!</h2>
-    <a href=<?php echo "$homepath/login/register_page.php"; ?> ><button class="button">Join Circle</button></a>
+    <a href=<?php echo "\"$homepath/login/register_page.php\""; ?> ><button class="button">Join Circle</button></a>
 </div>
 <div class="box">
     <div class="box-text">

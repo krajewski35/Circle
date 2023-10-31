@@ -230,6 +230,12 @@ button, input[type="submit"] {
 }
 
 
+/* ---- Admin User List Table ---- */
+table.userlist {
+  
+}
+
+
 /* ---- Footer ---- */
 #footer {
   margin-top: 50px;
