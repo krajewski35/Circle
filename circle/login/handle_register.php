@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Check if credentials valid
             if ($r) {
                 echo "Welcome to Circle {$user['firstname']} {$user['lastname']}! You can now log in.";
-                echo "</p><button type=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
+                echo "</p><button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Log in</button>";
             }
             //Invalid credentials
             else
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<li>$error</li>";
         }
         //Button to redirect user back to registration page
-        echo "</p><button type=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
+        echo "</p><button type=\"button\" class=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
     }
 }
 
