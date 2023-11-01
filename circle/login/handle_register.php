@@ -99,12 +99,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     if (!empty($errors)) {
         //List errors
-        echo "<p class=\"error\"><strong>The following errors occured:</strong><ul class=\"error\">";
+        echo "<div class=\"error\"><ul class=\"error\"><li><h3>The following errors occured:</h3></li>";
         foreach($errors as $error) {
-            echo "<li>$error</li>";
+            echo "<li>- $error -</li>";
         }
-        //Button to redirect user back to registration page
-        echo "</p><button type=\"button\" class=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
+        //Button to redirect user back to login page
+        echo "</ul></div><button type=\"button\" class=\"button\" onclick=\"location.href='register_page.php'\">Try again</button>";
     }
 }
 
