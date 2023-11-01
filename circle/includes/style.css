@@ -313,13 +313,18 @@ table.userlist {
   width: 80%;
   text-align: center;
   padding: 10px;
-  background-color: #04AA6D;
-  color: #FFFFFF;
+  background-color: #89ffbe;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+/*
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+*/
 
 
 /* ---- Footer ---- */

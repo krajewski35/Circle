@@ -27,6 +27,7 @@ echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath
 ?>
 
 <!-- Information change form -->
+<h2>Change User Details</h2>
 <form action="handle_change.php" method="post" align="center" class="login">
     <fieldset class="login">
         <p>
@@ -97,7 +98,7 @@ echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath
 <hr class="user-settings">
 
 <!-- Account deletion button -->
-<h2 class="user-settings">Delete account (Warning: This action is irreversible)</h2><br>
+<h2 class="user-settings">Delete account (Warning: This action is irreversible)</h2>
 <form action="delete_account.php" method="post" align="center" class="urgent">
     <input type="submit" name="submit" class="button_warn" value="Delete account" />
 </form>
