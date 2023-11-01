@@ -95,13 +95,13 @@ if ($num_rows > 0) {
                     <form action=\"admin_change.php\" method=\"post\">
                         <input type=\"hidden\" name=\"email\" value=\"{$user['email']}\">
                         <input type=\"hidden\" name=\"admin\" value=\"{$user['admin']}\">
-                        <input type=\"submit\" name=\"submit\" value=\"$admin_action\" />
+                        <input type=\"submit\" class=\"button-warn\" name=\"submit\" value=\"$admin_action\" />
                     </form>
                 </td>
                 <td>
                     <form action=\"admin_delete.php\" method=\"post\">
                         <input type=\"hidden\" name=\"email\" value=\"{$user['email']}\">
-                        <input type=\"submit\" name=\"submit\" value=\"Delete Account\" />
+                        <input type=\"submit\" class=\"button-warn\" name=\"submit\" value=\"Delete Account\" />
                     </form>
                 </td></tr>";
         }

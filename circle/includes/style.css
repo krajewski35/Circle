@@ -213,21 +213,21 @@ button, input[type="submit"] {
   background-color: #757575;
 }
 
-.button_reverse {
+.button-reverse {
   background-color: #fcfcfc;
   color: #000000;
 }
 
-.button_reverse:hover {
+.button-reverse:hover {
   background-color: #aaaaaa;
 }
 
-.button_warn {
+.button-warn {
   background-color: #a00000;
   color: #FFFFFF;
 }
 
-.button_warn:hover {
+.button-warn:hover {
   background-color: #fd2525;
 }
 
@@ -312,7 +312,6 @@ h2.user-settings {
 table.userlist {
   border-collapse: collapse;
   border-radius: 15px;
-  border-color: #000000;
   margin: 20px 0px;
   padding: 10px;
   width: 80%;
@@ -324,6 +323,10 @@ table.userlist {
 tr:nth-child(even) {
   background-color: #f2f2f2;
   color: #000000;
+}
+
+th.userlist, td.userlist {
+  border-bottom: 1px solid #c2c2c2;
 }
 
 /*

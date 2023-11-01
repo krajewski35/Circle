@@ -21,7 +21,7 @@ include("$homepath/includes/header.php");
     <div class="box-text">
         <h2>Circle is a one-stop app for everyone!</h2>
         <h2>• People • Causes • Sponsors •</h2>
-        <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/register_page.php"><button class="button_reverse">Help in your community</button></a>
+        <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/register_page.php"><button class="button-reverse">Help in your community</button></a>
     </div>
     <div class="box-img">
         <img src="images/1.png" >
@@ -35,7 +35,7 @@ include("$homepath/includes/header.php");
         <h2>Receive rewards for helping out!</h2>
         <h2>• Restaurants • Local businesses • Entertainment •</h2>
 
-       <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/login_page.php"> <button class="button_reverse">Rewards</button></a>
+       <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/login_page.php"> <button class="button-reverse">Rewards</button></a>
     </div>
 </div>
 
