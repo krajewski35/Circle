@@ -22,7 +22,7 @@ $pagetitle = 'This page does not exist';
 include("$homepath/includes/header.php");
 ?>
 
-<h2>This feature does not exist yet. Maybe we will develop it some time in the future.</h2>
+<h3>This feature does not exist yet. Maybe we will develop it some time in the future.</h3>
 <button type="button" class="button" onclick=<?php echo "\"location.href='$urlpath/index.php'\"" ?> >Back to home</button>
 
 <?php

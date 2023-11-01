@@ -232,6 +232,23 @@ button, input[type="submit"] {
 }
 
 
+/* ---- Login error list ---- */
+.error {
+  font-size: 16px;
+}
+
+ul.error {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+}
+
+ul li.error {
+  background: #ff9999;
+  color: rgb(95, 0, 0);
+}
+
+
 /* ---- User settings page ---- */
 hr.user-settings {
   margin: 20px auto;
@@ -315,6 +332,7 @@ div.userlist {
 
 table.userlist {
   border-collapse: collapse;
+  border-width: 0px;
   border-radius: 15px;
   margin: 20px 0px;
   padding: 10px;
