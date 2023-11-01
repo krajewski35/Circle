@@ -310,14 +310,18 @@ h2.user-settings {
 /* ---- Admin User List Table ---- */
 table.userlist {
   border-collapse: collapse;
+  border-radius: 6px;
+  margin: 20px 0px;
+  padding: 10px;
   width: 80%;
   text-align: center;
-  padding: 10px;
-  background-color: #89ffbe;
+  background-color: #149e52;
+  color: #ffffff;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+  color: #000000;
 }
 
 /*
