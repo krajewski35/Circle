@@ -18,7 +18,7 @@ include("$homepath/includes/header.php");
 
 //Display content
 echo "<h2 class=\"user-settings\">{$_SESSION['firstname']} {$_SESSION['lastname']}</h2>";
-echo "<h3>{$_SESSION['username']}</h3>";
+echo "<h3>Username: {$_SESSION['username']}</h3>";
 echo "<p class=\"userdetails\">" . 
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
     <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
