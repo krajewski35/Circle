@@ -17,13 +17,13 @@ $pagetitle = 'User Settings';
 include("$homepath/includes/header.php");
 
 //Display content
-echo "<h2>{$_SESSION['firstname']} {$_SESSION['lastname']}</h2>";
+echo "<h2 class=\"user-settings\">{$_SESSION['firstname']} {$_SESSION['lastname']}</h2>";
 echo "<h3>{$_SESSION['username']}</h3>";
 echo "<p class=\"userdetails\">" . 
     "<b>Email address: </b>" . $_SESSION['email'] . "<br>
     <b>User type: </b>" . ucfirst($_SESSION['membertype']) . "<br>
     <b>User status: </b>" . ucfirst($_SESSION['memberpurpose']) . "</p>";
-echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath/login/logout_page.php'\">Log out</button><br>";
+echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath/login/logout_page.php'\">Log out</button><br><hr class=\"user-settings\">";
 ?>
 
 <!-- Information change form -->
@@ -94,8 +94,10 @@ echo "<button type=\"button\" class=\"button\" onclick=\"location.href='$urlpath
     </fieldset>
 </form>
 
+<hr class="user-settings">
+
 <!-- Account deletion button -->
-<h2>Delete account (Warning: This action is irreversible)</h2><br>
+<h2 class="user-settings">Delete account (Warning: This action is irreversible)</h2><br>
 <form action="delete_account.php" method="post" align="center" class="urgent">
     <input type="submit" name="submit" class="button_warn" value="Delete account" />
 </form>

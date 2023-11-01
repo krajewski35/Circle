@@ -230,7 +230,22 @@ button, input[type="submit"] {
   background-color: #fd2525;
 }
 
-/* Example select input (From W3Schools) */
+
+/* ---- User settings page ---- */
+hr.user-settings {
+  margin: 20px;
+  width: 90%;
+  border-color: #004931;
+  border-width: 1px;
+  border-style: solid;
+}
+
+h2.user-settings {
+  margin-top: 15px;
+}
+
+
+/* ---- Example select input (From W3Schools) ---- */
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
@@ -301,7 +316,10 @@ table.userlist {
   padding: 10px;
   background-color: #04AA6D;
   color: #FFFFFF;
-  tr:nth-child(even) {background-color: #f2f2f2;}
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 
