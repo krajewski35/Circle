@@ -78,7 +78,7 @@ if ($num_rows > 0) {
 
     //Display list of actions for emails
     //Print header of table
-    echo '<div id="actionlist"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%" class="userlist">
+    echo '<div class="userlist"><table border="solid" align="center" cellspacing="3" cellpadding="3" width="75%" class="userlist">
         <tr>
         <th>User</th>
         <th>Make/Remove Admin</th>

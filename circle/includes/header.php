@@ -39,6 +39,9 @@
 
                 //Logged in user access
                 else {
+                    //User functionality
+                    echo "<li class=\"navigation\"><a href=\"$urlpath/nonexist.php\" class=\"navigation\">Community</a></li>";
+                    echo "<li class=\"navigation\"><a href=\"$urlpath/nonexist.php\" class=\"navigation\">Rewards</a></li>";
                     //Admin only navigation
                     if ($_SESSION['memberpurpose'] == 'admin') {
                         //User list
