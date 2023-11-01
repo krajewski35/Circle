@@ -65,12 +65,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include("$homepath/includes/header.php");
     
     //List errors
-    echo "<ul class=\"error\"><li><strong>The following errors occured:</strong></li>";
+    echo "<div class=\"error\"><ul class=\"error\"><li><strong>The following errors occured:</strong></li>";
     foreach($errors as $error) {
         echo "<li>- $error -</li>";
     }
     //Button to redirect user back to login page
-    echo "</ul><button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
+    echo "</ul></div><button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
     
     //Include footer
     include("$homepath/includes/footer.php");

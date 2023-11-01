@@ -244,6 +244,15 @@ button, input[type="submit"] {
   width: 30%;
 }
 
+div.error {
+  text-align: center;
+}
+
+ul.error {
+  display: inline-block;
+  text-align: left;
+}
+
 
 /* ---- User settings page ---- */
 hr.user-settings {
