@@ -71,7 +71,7 @@ h1, h2 {
 
 h1 {
   font-size: 44px;
-  margin-top: 25px;
+  margin: 25px;
 }
 
 h2 {
@@ -241,6 +241,7 @@ button, input[type="submit"] {
   padding: 20px;
   background: #ffc0c0;
   color: rgb(95, 0, 0);
+  width: 30%;
 }
 
 
