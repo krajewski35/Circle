@@ -66,7 +66,7 @@ include("$homepath/includes/header.php");
                     'cause' => 'I need help or support for my cause',
                     'sponsor' => 'I want to provide rewards for volunteers',
                 );
-                echo "<option value=\"\" selected disabled hidden>Select an Option</option>";
+                echo "<option class=\"custom-select\" value=\"\" selected disabled hidden>Select an Option</option>";
                 foreach ($memberpurpose as $purpose => $description) {
                     echo "<option value=\"$purpose\">$description</option>";
                 }
