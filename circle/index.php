@@ -35,7 +35,7 @@ include("$homepath/includes/header.php");
         <h2>Receive rewards for helping out!</h2>
         <h2>• Restaurants • Local businesses • Entertainment •</h2>
 
-       <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/login_page.php"> <button class="button_reverse">Help in your community</button></a>
+       <a href= "https://infost490f2305.soisweb.uwm.edu/circle/login/login_page.php"> <button class="button_reverse">Rewards</button></a>
     </div>
 </div>
 
