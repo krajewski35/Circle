@@ -80,7 +80,8 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 0;
+  margin: 10px 0px;
+  font-size: 18px;
 }
 
 .content-wrap {
@@ -235,16 +236,10 @@ button, input[type="submit"] {
 /* ---- Login error list ---- */
 .error {
   font-size: 16px;
-}
-
-ul.error {
   list-style-type: none;
   margin: 0;
   padding: 20px;
-}
-
-ul li.error {
-  background: #ff9999;
+  background: #ffc0c0;
   color: rgb(95, 0, 0);
 }
 
@@ -347,15 +342,16 @@ tr:nth-child(even) {
   color: #000000;
 }
 
+tr:nth-child(odd) {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 th.userlist, td.userlist {
   border-bottom: 1px solid #c2c2c2;
 }
 
-/*
-tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-*/
+
 
 
 /* ---- Footer ---- */

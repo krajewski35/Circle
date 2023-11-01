@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<li>- $error -</li>";
     }
     //Button to redirect user back to login page
-    echo "</ul></p><button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
+    echo "</ul><button type=\"button\" class=\"button\" onclick=\"location.href='login_page.php'\">Try again</button>";
     
     //Include footer
     include("$homepath/includes/footer.php");
