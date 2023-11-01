@@ -216,11 +216,13 @@ button, input[type="submit"] {
 
 .button-reverse {
   background-color: #fcfcfc;
+  border-color: #fcfcfc;
   color: #000000;
 }
 
 .button-reverse:hover {
   background-color: #aaaaaa;
+  border-color: #aaaaaa;
 }
 
 .button-warn {
