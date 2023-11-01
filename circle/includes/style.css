@@ -71,7 +71,7 @@ h1, h2 {
 
 h1 {
   font-size: 44px;
-  margin: 25px;
+  margin: 30px auto 25px auto;
 }
 
 h2 {
