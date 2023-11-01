@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include("$homepath/includes/header.php");
     
     //List errors
-    echo "<div class=\"error\"><ul class=\"error\"><li><strong>The following errors occured:</strong></li>";
+    echo "<div class=\"error\"><ul class=\"error\"><li><h3>The following errors occured:</h3></li>";
     foreach($errors as $error) {
         echo "<li>- $error -</li>";
     }

@@ -236,18 +236,18 @@ button, input[type="submit"] {
 /* ---- Login error list ---- */
 div.error {
   text-align: center;
-  width: 30%;
+  width: 60%;
+  margin: 10px auto;
 }
 
 ul.error {
   font-size: 16px;
   list-style-type: none;
   margin: 0;
-  padding: 15px;
+  padding: 25px;
   background: #ffc0c0;
   color: rgb(95, 0, 0);
   display: inline-block;
-  text-align: left;
 }
 
 
