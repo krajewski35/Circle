@@ -65,7 +65,7 @@ a:hover {
 h1, h2 {
   line-height: 1;
   font-family:'Caveat', cursive;
-  margin: 10px, 0px, 10px, 0px;
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -137,8 +137,8 @@ li a:hover.navigation {
 /* ---- Forms ---- */
 form.login {
   display: inline-block;
-  padding: 15px, auto, 15px, auto;
-  margin: 15px, auto, 10px, auto;
+  padding: 15px auto 15px auto;
+  margin: 15px auto 10px auto;
   background: #f1f1f1;
   box-shadow: 4.0px 6.0px 6.0px hsl(0deg 0% 0% / 0.38);
   border: 2px solid #ccc;
@@ -185,6 +185,8 @@ textarea {
 
 /* ---- All buttons (Including submit input) ---- */
 button, input[type="submit"] {
+  margin: 10px 0;
+  padding: 15px 40px;
   border: 0;
   border-radius: 15px;
   box-sizing: border-box;
@@ -196,7 +198,6 @@ button, input[type="submit"] {
   transition: all 200ms ease-out;
   user-select: none;
   touch-action: manipulation;
-  padding: 15px 40px;
   min-height: 40px;
   font-size: 16px;
   font-weight: bold;
@@ -232,7 +233,7 @@ button, input[type="submit"] {
 
 /* ---- Admin User List Table ---- */
 table.userlist {
-  
+
 }
 
 
