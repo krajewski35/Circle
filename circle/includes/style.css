@@ -339,11 +339,10 @@ table.userlist {
   border-collapse: collapse;
   border-width: 0px;
   border-radius: 15px;
-  margin: 20px 0px;
+  margin: 20px auto;
   padding: 10px;
   width: 80%;
   text-align: center;
-  background-color: #149e52;
   color: #ffffff;
 }
 
