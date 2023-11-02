@@ -44,10 +44,12 @@ a:hover {
 .box-text {
   height: 40vh;
   margin-top: 38vh;
+  flex-wrap: wrap;
 }
 
 .box-img {
   height: 75vh;
+  flex-wrap: wrap;
 }
 
 .box-img img{
@@ -66,7 +68,7 @@ a:hover {
 h1, h2 {
   line-height: 1;
   font-family:'Caveat', cursive;
-  margin: 10px 0;
+  margin: 10px;
   text-align: center;
 }
 
@@ -106,7 +108,7 @@ ul.navigation {
   padding: 10px 20px 5px 20px;
 }
 
-/*TEST*/
+/* Responsive horizontal to column layout for navigation menu */
 @media only screen and (max-width: 700px) {
   ul.navigation {
     flex-direction: column;
@@ -372,9 +374,11 @@ th.userlist, td.userlist {
 }
 
 
-
-
 /* ---- Footer ---- */
-#footer {
+div.footer {
   margin-top: 50px;
+}
+
+p.footer {
+  margin: 10px;
 }
