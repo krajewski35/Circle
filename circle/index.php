@@ -17,7 +17,7 @@ include("$homepath/includes/header.php");
     <h2>Where volunteering comes in full circle!</h2>
     <a href=<?php echo "\"$urlpath/login/register_page.php\""; ?> ><button class="button">Join Circle</button></a>
 </div>
-<div class="content-wrap">
+<div class="side-by-side">
     <div class="box">
         <div class="box-text">
             <h2>Circle is a one-stop app for everyone!</h2>
