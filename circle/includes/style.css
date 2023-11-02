@@ -332,6 +332,7 @@ h2.user-settings {
 /* ---- Admin User List Table ---- */
 div.userlist {
   text-align: center;
+  margin: 20px auto;
 }
 
 table.userlist {
