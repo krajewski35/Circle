@@ -27,6 +27,8 @@ a:hover {
   text-decoration: none;
 }
 
+
+/* ---- Homepage Elements ---- */
 .mke {
   width: 100%;
 }
@@ -34,8 +36,6 @@ a:hover {
 .box {
   /*display: grid;
   grid-template-columns: 50% 50%;*/
-  display: flex;
-  flex-wrap: wrap;
   border: 1px solid black;
   background-color: black;
   color: white;
@@ -62,8 +62,17 @@ a:hover {
   border-radius: 15px;
 }
 
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-/* Headings */
+
+/* ---- Headings ---- */
 h1, h2 {
   line-height: 1;
   font-family:'Caveat', cursive;
@@ -84,13 +93,6 @@ h2 {
 h3 {
   margin: 10px;
   font-size: 18px;
-}
-
-.content-wrap {
-  max-width: 800px;
-  width: 85%;
-  margin: 0 auto;
-  padding: 60px 0;    
 }
 
 
