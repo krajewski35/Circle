@@ -34,7 +34,7 @@ include("$homepath/includes/header.php");
         </div>
         <div class="box-text">
             <h2>Receive rewards for helping out!</h2>
-            <h2>• Restaurants • Local businesses • Entertainment •</h2>
+            <h2>• Food • Entertainment • Merch •</h2>
 
         <a href=<?php echo "\"$urlpath/nonexist.php\""; ?> > <button class="button-reverse">Check out rewards</button></a>
         </div>
