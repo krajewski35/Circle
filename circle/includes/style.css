@@ -56,10 +56,14 @@ a:hover {
 .box-text {
   height: 25vh;
   margin-top: 13vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .box-img {
   height: 75vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 .box-img img{
