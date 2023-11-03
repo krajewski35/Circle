@@ -48,15 +48,19 @@ a:hover {
   /*height: 100vh;*/
 }
 
-/* Responsive horizontal to column layout for navigation menu */
+/* Responsive horizontal to column layout for homepage flexboxes */
 @media only screen and (max-width: 1150px) {
   .box {
     flex-direction: column;
   }
+
+  .box-text {
+    height: 30vh;
+  }
 }
 
 .box-text {
-  height: 25vh;
+  height: 35vh;
   margin-top: 13vh;
   display: flex;
   flex-direction: column;
