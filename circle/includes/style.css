@@ -70,15 +70,17 @@ h2.box-text {
   margin: 10px auto;
 }
 
-.box-img {
-  height: 75vh;
+div.box-img {
+  height: auto;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .box-img img{
-  height: 75vh;
+  max-height: 75vh;
   margin-top: 10vh;
+  width: 90%;
 }
 
 .box button {

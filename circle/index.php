@@ -25,12 +25,12 @@ include("$homepath/includes/header.php");
             <a href=<?php echo "\"$urlpath/nonexist.php\""; ?> ><button class="button-reverse">Help in your community</button></a>
         </div>
         <div class="box-img">
-            <img src="images/1.png" >
+            <img src="images/1.png">
         </div>
     </div>
     <div class="box">
         <div class="box-img">
-            <img src="images/rewards.png" >
+            <img src="images/rewards.png">
         </div>
         <div class="box-text">
             <h2>Receive rewards for helping out!</h2>
